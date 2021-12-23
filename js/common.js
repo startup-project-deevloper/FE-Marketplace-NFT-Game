@@ -34,6 +34,8 @@ if (Modernizr.touch === true && window.innerWidth <= 767) {
   }
 
 
+
+
   function init() {
     getBarwidth()
   }
