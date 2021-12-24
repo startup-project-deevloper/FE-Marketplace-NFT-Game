@@ -11125,10 +11125,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.nav {
+.nav-custom {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 65px;
+  box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.55);
 }
-.nav:before {
+.nav-custom:before {
   content: "";
   position: absolute;
   top: 0;
@@ -11136,22 +11143,61 @@ textarea.form-control-lg {
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: 0.1;
+  opacity: 0.05;
 }
-.nav .nav-item {
-  flex: 1 1 auto;
+.nav-custom .nav-item {
   text-align: unset;
   z-index: 1;
+  align-items: center;
+  margin: 0 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
 }
-.nav .nav-link {
+.nav-custom .nav-item .nav-link {
   color: #318fff;
   text-transform: uppercase;
   font-size: 2rem;
-  padding-left: 4rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0;
   z-index: 1;
+  /*    position: relative;
+      &:before {
+        position: absolute;
+        content: "";
+        background-color: #ffffff;
+        left: 19%;
+        bottom: 0;
+        width: 35%;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        height: 20%;
+      }*/
 }
-.nav .nav-link.active {
+.nav-custom .nav-item .nav-link.active {
   color: #ffffff;
+  padding-top: 0;
+}
+.nav-custom .nav-item .nav-link-bottom {
+  display: block;
+  width: 65%;
+  height: 25%;
+  background-color: #ffffff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .navbar {
@@ -11278,5 +11324,31 @@ body, html {
   height: 25px;
   background-color: #1e7be5;
   opacity: 0.7;
+}
+
+.main-split {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-split .main-menu-left {
+  width: 305px;
+}
+.main-split .main-menu-left .menu-clear {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+.main-split .main-list-right {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

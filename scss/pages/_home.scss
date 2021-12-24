@@ -19,3 +19,16 @@ body, html {
   background-color: #1e7be5;
   opacity: 0.7;
 }
+.main-split{
+  @include flexbox();
+  .main-menu-left{
+    width: 305px;
+    .menu-clear{
+      @include flexbox();
+      @include justify-content(space-between);
+    }
+  }
+  .main-list-right{
+    width: 100%;
+  }
+}
