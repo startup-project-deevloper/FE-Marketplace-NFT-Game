@@ -1,4 +1,80 @@
 .navbar {
-  padding-top: 0rem;
+  padding-top: 0;
   padding-bottom: 0.3rem;
+  .container-fluid{
+    align-items: end;
+  }
+
+  a.navbar-brand {
+    @include flexbox();
+    @include align-items(end);
+  }
+
+  a.navbar-brand span {
+    margin-left: 1.2rem;
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+
+  .connect-wallet {
+    margin-right: 3rem;
+
+    .cw-button {
+      box-shadow: rgba(0, 0, 0, 0.4) 0 5px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      background-color: #e97500;
+      border: solid transparent;
+      border-radius: 18px;
+      border-width: 0 0 4px;
+      box-sizing: border-box;
+      color: #11478c;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0 0 1rem 0;
+      outline: none;
+      overflow: visible;
+      padding: 15px 20px;
+      text-align: center;
+      text-transform: uppercase;
+      touch-action: manipulation;
+      transform: translateZ(0);
+      transition: filter .2s;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    .cw-button:after {
+      background-clip: padding-box;
+      background-color: #ffdc30;
+      border: solid transparent;
+      border-radius: 14px;
+      border-width: 0 0 4px;
+      bottom: -4px;
+      content: "";
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .cw-button:focus {
+      user-select: auto;
+    }
+  }
+
+  .cw-button:hover:not(:disabled) {
+    filter: brightness(1.1);
+  }
+
+  .cw-button:disabled {
+    cursor: auto;
+  }
+
 }
