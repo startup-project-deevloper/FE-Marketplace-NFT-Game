@@ -11133,7 +11133,7 @@ textarea.form-control-lg {
   display: -ms-flexbox;
   display: flex;
   height: 65px;
-  box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.3);
 }
 .nav-custom:before {
   content: "";
@@ -11149,7 +11149,7 @@ textarea.form-control-lg {
   text-align: unset;
   z-index: 1;
   align-items: center;
-  margin: 0 3rem;
+  margin: 0 10rem 0 3.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -11170,22 +11170,10 @@ textarea.form-control-lg {
 .nav-custom .nav-item .nav-link {
   color: #318fff;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding-top: 0.3rem;
   padding-bottom: 0;
   z-index: 1;
-  /*    position: relative;
-      &:before {
-        position: absolute;
-        content: "";
-        background-color: #ffffff;
-        left: 19%;
-        bottom: 0;
-        width: 35%;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-        height: 20%;
-      }*/
 }
 .nav-custom .nav-item .nav-link.active {
   color: #ffffff;
@@ -11304,15 +11292,15 @@ Content
 /* ==========================================================================
 Footer
 ========================================================================== */
-body, html {
-  height: 100%;
+body {
+  min-height: 100vh;
 }
 
 .bg {
   /* The image used */
   background-image: url("../images/SplashArt.png");
   /* Full height */
-  height: 100%;
+  min-height: 100vh;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -11334,7 +11322,12 @@ body, html {
   display: flex;
 }
 .main-split .main-menu-left {
+  position: relative;
   width: 305px;
+  padding-right: 2.5rem;
+  padding-left: 1rem;
+  min-height: 100vh;
+  z-index: 1;
 }
 .main-split .main-menu-left .menu-clear {
   display: -webkit-box;
@@ -11347,6 +11340,78 @@ body, html {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
+  padding-top: 1rem;
+}
+.main-split .main-menu-left .menu-clear span {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.main-split .main-menu-left .menu-clear a.clear-filter {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.main-split .main-menu-left .menu-tabs ul.nav {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: unset;
+  -moz-flex-wrap: unset;
+  -ms-flex-wrap: unset;
+  flex-wrap: unset;
+  margin: 1rem 0;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item {
+  border: 2px solid #90c0fa;
+  width: 100%;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item button.nav-link {
+  padding: 0.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  width: 100%;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item button.nav-link.active {
+  background-color: #022d5e;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:first-child {
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:first-child button.nav-link {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:nth-child(2) button.nav-link {
+  padding: 0.5rem 1rem !important;
+  border-radius: 0;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:last-child {
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:last-child button.nav-link {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.main-split .main-menu-left:before {
+  content: "";
+  position: absolute;
+  top: -65px;
+  bottom: 0;
+  left: -12px;
+  width: 100%;
+  z-index: -1;
+  box-shadow: inset -2px 0 25px -1px rgba(0, 0, 0, 0.2);
 }
 .main-split .main-list-right {
   width: 100%;

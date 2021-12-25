@@ -1,12 +1,13 @@
-body, html {
-  height: 100%;
+body {
+  min-height: 100vh;
 }
+
 .bg {
   /* The image used */
-  background-image: url("../images/SplashArt.png");
+  background-image: url('../images/SplashArt.png');
 
   /* Full height */
-  height: 100%;
+  min-height: 100vh;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -14,21 +15,108 @@ body, html {
   background-size: cover;
   background-color: #165db7;
 }
-.white-space{
+
+.white-space {
   height: 25px;
   background-color: #1e7be5;
   opacity: 0.7;
 }
-.main-split{
+
+.main-split {
   @include flexbox();
-  .main-menu-left{
+
+  .main-menu-left {
+    position: relative;
     width: 305px;
-    .menu-clear{
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+    min-height: 100vh;
+    z-index: 1;
+
+    .menu-clear {
       @include flexbox();
       @include justify-content(space-between);
+      padding-top: 1rem;
+
+      span {
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+
+      a.clear-filter {
+        color: #ffffff;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+
+    .menu-tabs {
+      ul.nav {
+        @include justify-content(center);
+        @include flex-wrap(unset);
+        margin: 1rem 0;
+
+        li.nav-item {
+          border: 2px solid #90c0fa;
+          width: 100%;
+          button.nav-link {
+            padding: 0.5rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            width: 100%;
+            &.active {
+              background-color: #022d5e;
+            }
+          }
+
+          &:first-child {
+            border-right: none;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            button.nav-link{
+              border-top-left-radius: 10px;
+              border-bottom-left-radius: 10px;
+              border-top-right-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+
+          &:nth-child(2){
+            button.nav-link{
+              padding: 0.5rem 1rem !important;
+              border-radius: 0;
+            }
+          }
+
+          &:last-child {
+            border-left: none;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            button.nav-link{
+              border-top-left-radius: 0;
+              border-bottom-left-radius: 0;
+              border-top-right-radius: 10px;
+              border-bottom-right-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -65px;
+      bottom: 0;
+      left: -12px;
+      width: 100%;
+      z-index: -1;
+      box-shadow: inset -2px 0 25px -1px rgb(0 0 0 / 20%)
     }
   }
-  .main-list-right{
+
+  .main-list-right {
     width: 100%;
   }
 }
