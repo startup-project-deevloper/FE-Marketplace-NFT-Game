@@ -11125,6 +11125,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.form-check .form-check-input {
+  float: unset;
+  margin-left: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: 0;
+  background-color: #023875;
+  box-shadow: inset 0px 0px 3px 0px #000000b5;
+}
+.form-check .form-check-input:checked[type=checkbox] {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%2350d500' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+}
+
 .nav-custom {
   position: relative;
   display: -webkit-box;
@@ -11133,7 +11146,7 @@ textarea.form-control-lg {
   display: -ms-flexbox;
   display: flex;
   height: 65px;
-  box-shadow: 0px 9px 15px -5px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 7px 15px 2px rgba(0, 0, 0, 0.3);
 }
 .nav-custom:before {
   content: "";
@@ -11149,7 +11162,7 @@ textarea.form-control-lg {
   text-align: unset;
   z-index: 1;
   align-items: center;
-  margin: 0 3rem;
+  margin: 0 10rem 0 3.5rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -11170,22 +11183,10 @@ textarea.form-control-lg {
 .nav-custom .nav-item .nav-link {
   color: #318fff;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
   padding-top: 0.3rem;
   padding-bottom: 0;
   z-index: 1;
-  /*    position: relative;
-      &:before {
-        position: absolute;
-        content: "";
-        background-color: #ffffff;
-        left: 19%;
-        bottom: 0;
-        width: 35%;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-        height: 20%;
-      }*/
 }
 .nav-custom .nav-item .nav-link.active {
   color: #ffffff;
@@ -11304,15 +11305,15 @@ Content
 /* ==========================================================================
 Footer
 ========================================================================== */
-body, html {
-  height: 100%;
+body {
+  min-height: 100vh;
 }
 
 .bg {
   /* The image used */
   background-image: url("../images/SplashArt.png");
   /* Full height */
-  height: 100%;
+  min-height: 100vh;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -11334,7 +11335,12 @@ body, html {
   display: flex;
 }
 .main-split .main-menu-left {
+  position: relative;
   width: 305px;
+  padding-right: 2.5rem;
+  padding-left: 1rem;
+  min-height: 100vh;
+  z-index: 1;
 }
 .main-split .main-menu-left .menu-clear {
   display: -webkit-box;
@@ -11347,6 +11353,287 @@ body, html {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
   justify-content: space-between;
+  padding-top: 1rem;
+  font-size: 1.25rem;
+}
+.main-split .main-menu-left .menu-clear span {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.main-split .main-menu-left .menu-clear a.clear-filter {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.main-split .main-menu-left .menu-tabs ul.nav {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-flex-wrap: unset;
+  -moz-flex-wrap: unset;
+  -ms-flex-wrap: unset;
+  flex-wrap: unset;
+  margin: 1rem 0;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item {
+  border: 2px solid #90c0fa;
+  width: 100%;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item button.nav-link {
+  padding: 0.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  width: 100%;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item button.nav-link.active {
+  background-color: #022d5e;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:first-child {
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:first-child button.nav-link {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:nth-child(2) button.nav-link {
+  padding: 0.5rem 1rem !important;
+  border-radius: 0;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:last-child {
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.main-split .main-menu-left .menu-tabs ul.nav li.nav-item:last-child button.nav-link {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body {
+  text-align: center;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-item {
+  margin-top: 1.5rem;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .menu-header {
+  color: #023875;
+  background: #90c0fa;
+  border-radius: 10px;
+  padding: 0.2rem 0;
+  margin: 1rem 3.5rem;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-rarity .general-form-check {
+  -webkit-box-pack: space-between !important;
+  -ms-flex-pack: space-between !important;
+  -webkit-justify-content: space-between !important;
+  -moz-justify-content: space-between !important;
+  justify-content: space-between !important;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-rarity .general-form-check .form-check {
+  margin: 0.25rem;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-rarity .general-form-check .form-check-input {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider {
+  /* This line can be removed it was just for display on CodePen: */
+  /* Functional styling;
+   * These styles are required for noUiSlider to function.
+   * You don't need to change these rules to apply your design.
+   */
+  /* Painting and performance;
+   * Browsers can paint handles in their own layer.
+   */
+  /* Slider size and handle placement;
+   */
+  /*            .noUi-horizontal .noUi-handle {
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                left: -7px;
+                top: -7px;
+                background-color: #ffffff;
+              }*/
+  /* Styling;
+   */
+  /* Handles and cursors;
+   */
+  /* Disabled state;
+   */
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .slider-labels {
+  margin-top: 10px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-target, .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-target {
+  position: relative;
+  direction: ltr;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  /* Fix 401 */
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-origin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-handle {
+  position: relative;
+  z-index: 1;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-stacking .noUi-handle {
+  /* This class is applied to the lower origin when
+     its values is > 50%. */
+  z-index: 10;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-state-tap .noUi-origin {
+  -webkit-transition: left 0.3s, top 0.3s;
+  transition: left 0.3s, top 0.3s;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-state-drag * {
+  cursor: inherit !important;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-base, .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-handle {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-horizontal {
+  height: 4px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-horizontal .noUi-handle {
+  width: 12px;
+  height: 6px;
+  left: -7px;
+  top: -1px;
+  background: #ffffff;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 285px 23px rgba(111, 171, 235, 0.93);
+  -moz-box-shadow: 0px 0px 285px 23px rgba(111, 171, 235, 0.93);
+  box-shadow: 0px 0px 285px 23px red;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-horizontal .noUi-handle:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 4px solid #ffffff;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-horizontal .noUi-handle:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 4px solid #ffffff;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-background {
+  background: #023875;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-connect {
+  background: #ffffff;
+  -webkit-transition: background 450ms;
+  transition: background 450ms;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-origin {
+  border-radius: 2px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-target {
+  border-radius: 2px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-draggable {
+  cursor: w-resize;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-vertical .noUi-draggable {
+  cursor: n-resize;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-handle {
+  cursor: default;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-handle:active {
+  left: -7px;
+  top: -1px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider [disabled].noUi-connect, .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider [disabled] .noUi-connect {
+  background: #B8B8B8;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider [disabled].noUi-origin, .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider [disabled] .noUi-handle {
+  cursor: not-allowed;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .slider-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-form-check {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-form-check .form-check {
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+}
+.main-split .main-menu-left:before {
+  content: "";
+  position: absolute;
+  top: -65px;
+  bottom: 0;
+  left: -12px;
+  width: 100%;
+  z-index: -1;
+  box-shadow: inset -2px 0 25px -1px rgba(0, 0, 0, 0.2);
 }
 .main-split .main-list-right {
   width: 100%;

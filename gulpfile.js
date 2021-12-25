@@ -129,7 +129,7 @@ function images() {
     .src(paths.images.src)
     .pipe(plumber())
     .pipe(newer(paths.images.dest)) // pass through newer images only
-    .pipe(imagemin({ optimizationLevel: 5 }))
+    // .pipe(imagemin({ optimizationLevel: 5 }))
     .pipe(size())
     .pipe(gulp.dest(paths.images.dest))
     .pipe(server.reload({stream: true}))
