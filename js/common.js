@@ -11,7 +11,7 @@ if (Modernizr.touch === true && window.innerWidth <= 767) {
 
 }
 
-(function() {
+(function () {
   'use strict'
 
   /* ==================================================
@@ -32,8 +32,6 @@ if (Modernizr.touch === true && window.innerWidth <= 767) {
     // console.log(scrollbarWidth);
     return scrollbarWidth
   }
-
-
 
 
   function init() {

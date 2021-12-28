@@ -1,17 +1,19 @@
 // Requires jQuery
 
 // Initialize slider:
-$(document).ready(function() {
-  $('.noUi-handle').on('click', function() {
+$(document).ready(function () {
+  $('.noUi-handle').on('click', function () {
     $(this).width(50);
   });
-  var rangeSlider = document.getElementById('slider-range');
+
   var moneyFormat = wNumb({
     decimals: 0,
     thousand: ',',
     prefix: ''
   });
-  noUiSlider.create(rangeSlider, {
+
+  var breedRangeSlider = document.getElementById('breed-range');
+  noUiSlider.create(breedRangeSlider, {
     start: [0, 5],
     step: 1,
     range: {
@@ -21,23 +23,220 @@ $(document).ready(function() {
     format: moneyFormat,
     connect: true
   });
-
   // Set visual min and max values and also update value hidden form inputs
-  rangeSlider.noUiSlider.on('update', function(values, handle) {
-    document.getElementById('slider-range-value1').innerHTML = values[0];
-    document.getElementById('slider-range-value2').innerHTML = values[1];
+  breedRangeSlider.noUiSlider.on('update', function (values, handle) {
+    document.getElementById('breed-range-value1').innerHTML = values[0];
+    document.getElementById('breed-range-value2').innerHTML = values[1];
     document.getElementsByName('min-value').value = moneyFormat.from(
       values[0]);
     document.getElementsByName('max-value').value = moneyFormat.from(
       values[1]);
   });
-});
 
+  var attackRangeSlider = document.getElementById('attack-range');
+  noUiSlider.create(attackRangeSlider, {
+    start: [0, 99],
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [99]
+    },
+    format: moneyFormat,
+    connect: true
+  });
+  // Set visual min and max values and also update value hidden form inputs
+  attackRangeSlider.noUiSlider.on('update', function (values, handle) {
+    document.getElementById('attack-range-value1').innerHTML = values[0];
+    document.getElementById('attack-range-value2').innerHTML = values[1];
+    document.getElementsByName('min-value').value = moneyFormat.from(
+      values[0]);
+    document.getElementsByName('max-value').value = moneyFormat.from(
+      values[1]);
+  });
+
+  var defenseRangeSlider = document.getElementById('defense-range');
+  noUiSlider.create(defenseRangeSlider, {
+    start: [0, 99],
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [99]
+    },
+    format: moneyFormat,
+    connect: true
+  });
+// Set visual min and max values and also update value hidden form inputs
+  defenseRangeSlider.noUiSlider.on('update', function (values, handle) {
+    document.getElementById('defense-range-value1').innerHTML = values[0];
+    document.getElementById('defense-range-value2').innerHTML = values[1];
+    document.getElementsByName('min-value').value = moneyFormat.from(
+      values[0]);
+    document.getElementsByName('max-value').value = moneyFormat.from(
+      values[1]);
+  });
+
+  var critRangeSlider = document.getElementById('crit-range');
+  noUiSlider.create(critRangeSlider, {
+    start: [0, 99],
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [99]
+    },
+    format: moneyFormat,
+    connect: true
+  });
+// Set visual min and max values and also update value hidden form inputs
+  critRangeSlider.noUiSlider.on('update', function(values, handle) {
+    document.getElementById('crit-range-value1').innerHTML = values[0];
+    document.getElementById('crit-range-value2').innerHTML = values[1];
+    document.getElementsByName('min-value').value = moneyFormat.from(
+      values[0]);
+    document.getElementsByName('max-value').value = moneyFormat.from(
+      values[1]);
+  });
+
+  var armourRangeSlider = document.getElementById('armour-range');
+  noUiSlider.create(armourRangeSlider, {
+    start: [0, 99],
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [99]
+    },
+    format: moneyFormat,
+    connect: true
+  });
+// Set visual min and max values and also update value hidden form inputs
+  armourRangeSlider.noUiSlider.on('update', function(values, handle) {
+    document.getElementById('armour-range-value1').innerHTML = values[0];
+    document.getElementById('armour-range-value2').innerHTML = values[1];
+    document.getElementsByName('min-value').value = moneyFormat.from(
+      values[0]);
+    document.getElementsByName('max-value').value = moneyFormat.from(
+      values[1]);
+  });
+
+  var heartRangeSlider = document.getElementById('heart-range');
+  noUiSlider.create(heartRangeSlider, {
+    start: [0, 99],
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [99]
+    },
+    format: moneyFormat,
+    connect: true
+  });
+// Set visual min and max values and also update value hidden form inputs
+  heartRangeSlider.noUiSlider.on('update', function(values, handle) {
+    document.getElementById('heart-range-value1').innerHTML = values[0];
+    document.getElementById('heart-range-value2').innerHTML = values[1];
+    document.getElementsByName('min-value').value = moneyFormat.from(
+      values[0]);
+    document.getElementsByName('max-value').value = moneyFormat.from(
+      values[1]);
+  });
+
+  var speedRangeSlider = document.getElementById('speed-range');
+  noUiSlider.create(speedRangeSlider, {
+    start: [0, 99],
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [99]
+    },
+    format: moneyFormat,
+    connect: true
+  });
+// Set visual min and max values and also update value hidden form inputs
+  speedRangeSlider.noUiSlider.on('update', function(values, handle) {
+    document.getElementById('speed-range-value1').innerHTML = values[0];
+    document.getElementById('speed-range-value2').innerHTML = values[1];
+    document.getElementsByName('min-value').value = moneyFormat.from(
+      values[0]);
+    document.getElementsByName('max-value').value = moneyFormat.from(
+      values[1]);
+  });
+
+  var luckRangeSlider = document.getElementById('luck-range');
+  noUiSlider.create(luckRangeSlider, {
+    start: [0, 99],
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [99]
+    },
+    format: moneyFormat,
+    connect: true
+  });
+// Set visual min and max values and also update value hidden form inputs
+  luckRangeSlider.noUiSlider.on('update', function(values, handle) {
+    document.getElementById('luck-range-value1').innerHTML = values[0];
+    document.getElementById('luck-range-value2').innerHTML = values[1];
+    document.getElementsByName('min-value').value = moneyFormat.from(
+      values[0]);
+    document.getElementsByName('max-value').value = moneyFormat.from(
+      values[1]);
+  });
+
+  var bookRangeSlider = document.getElementById('book-range');
+  noUiSlider.create(bookRangeSlider, {
+    start: [0, 99],
+    step: 1,
+    range: {
+      'min': [0],
+      'max': [99]
+    },
+    format: moneyFormat,
+    connect: true
+  });
+// Set visual min and max values and also update value hidden form inputs
+  bookRangeSlider.noUiSlider.on('update', function(values, handle) {
+    document.getElementById('book-range-value1').innerHTML = values[0];
+    document.getElementById('book-range-value2').innerHTML = values[1];
+    document.getElementsByName('min-value').value = moneyFormat.from(
+      values[0]);
+    document.getElementsByName('max-value').value = moneyFormat.from(
+      values[1]);
+  });
+
+
+  // clear fix button
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    breedRangeSlider.noUiSlider.reset();
+  });
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    attackRangeSlider.noUiSlider.reset();
+  });
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    defenseRangeSlider.noUiSlider.reset();
+  });
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    critRangeSlider.noUiSlider.reset();
+  });
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    armourRangeSlider.noUiSlider.reset();
+  });
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    heartRangeSlider.noUiSlider.reset();
+  });
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    speedRangeSlider.noUiSlider.reset();
+  });
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    luckRangeSlider.noUiSlider.reset();
+  });
+  document.getElementById('clearFilter').addEventListener('click', function () {
+    bookRangeSlider.noUiSlider.reset();
+  });
+
+});
 
 
 // https://refreshless.com/nouislider/
 /*! nouislider - 8.3.0 - 2016-02-14 17:37:19 */
-(function(factory) {
+(function (factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
     define([], factory);
@@ -48,19 +247,22 @@ $(document).ready(function() {
     // Browser globals
     window.noUiSlider = factory();
   }
-}(function() {
+}(function () {
   'use strict';
+
   // Removes duplicates from an array.
   function unique(array) {
-    return array.filter(function(a) {
+    return array.filter(function (a) {
       return !this[a] ? this[a] = true : false;
     }, {});
   }
+
   // Round a value to the closest 'to'.
 
   function closest(value, to) {
     return Math.round(value / to) * to;
   }
+
   // Current position of an element relative to the document.
 
   function offset(elem) {
@@ -79,41 +281,48 @@ $(document).ready(function() {
       left: rect.left + pageOffset.x - docElem.clientLeft
     };
   }
+
   // Checks whether a value is numerical.
 
   function isNumeric(a) {
     return typeof a === 'number' && !isNaN(a) && isFinite(a);
   }
+
   // Rounds a number to 7 supported decimals.
 
   function accurateNumber(number) {
     var p = Math.pow(10, 7);
     return Number((Math.round(number * p) / p).toFixed(7));
   }
+
   // Sets a class and removes it after [duration] ms.
 
   function addClassFor(element, className, duration) {
     addClass(element, className);
-    setTimeout(function() {
+    setTimeout(function () {
       removeClass(element, className);
     }, duration);
   }
+
   // Limits a value to 0 - 100
 
   function limit(a) {
     return Math.max(Math.min(a, 100), 0);
   }
+
   // Wraps a variable as an array, if it isn't one yet.
 
   function asArray(a) {
     return Array.isArray(a) ? a : [a];
   }
+
   // Counts decimals
 
   function countDecimals(numStr) {
-    var pieces = numStr.split(".");
+    var pieces = numStr.split('.');
     return pieces.length > 1 ? pieces[1].length : 0;
   }
+
   // http://youmightnotneedjquery.com/#add_class
 
   function addClass(el, className) {
@@ -123,6 +332,7 @@ $(document).ready(function() {
       el.className += ' ' + className;
     }
   }
+
   // http://youmightnotneedjquery.com/#remove_class
 
   function removeClass(el, className) {
@@ -133,17 +343,19 @@ $(document).ready(function() {
         className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
     }
   }
+
   // https://plainjs.com/javascript/attributes/adding-removing-and-testing-for-classes-9/
 
   function hasClass(el, className) {
     return el.classList ? el.classList.contains(className) : new RegExp(
       '\\b' + className + '\\b').test(el.className);
   }
+
   // https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY#Notes
 
   function getPageOffset() {
     var supportPageOffset = window.pageXOffset !== undefined,
-      isCSS1Compat = ((document.compatMode || "") === "CSS1Compat"),
+      isCSS1Compat = ((document.compatMode || '') === 'CSS1Compat'),
       x = supportPageOffset ? window.pageXOffset : isCSS1Compat ?
         document.documentElement.scrollLeft : document.body.scrollLeft,
       y = supportPageOffset ? window.pageYOffset : isCSS1Compat ?
@@ -153,18 +365,21 @@ $(document).ready(function() {
       y: y
     };
   }
+
   // Shorthand for stopPropagation so we don't have to create a dynamic method
 
   function stopPropagation(e) {
     e.stopPropagation();
   }
+
   // todo
 
   function addCssPrefix(cssPrefix) {
-    return function(className) {
+    return function (className) {
       return cssPrefix + className;
     };
   }
+
   var
     // Determine the events to bind. IE11 implements pointerEvents without
     // a prefix, which breaks compatibility with the IE10 implementation.
@@ -188,22 +403,26 @@ $(document).ready(function() {
   function subRangeRatio(pa, pb) {
     return (100 / (pb - pa));
   }
+
   // (percentage) How many percent is this value of this range?
 
   function fromPercentage(range, value) {
     return (value * 100) / (range[1] - range[0]);
   }
+
   // (percentage) Where is this value on this range?
 
   function toPercentage(range, value) {
     return fromPercentage(range, range[0] < 0 ? value + Math.abs(range[0]) :
       value - range[0]);
   }
+
   // (value) How much is this percentage on this range?
 
   function isPercentage(range, value) {
     return ((value * (range[1] - range[0])) / 100) + range[0];
   }
+
   // Range conversion
 
   function getJ(value, arr) {
@@ -213,6 +432,7 @@ $(document).ready(function() {
     }
     return j;
   }
+
   // (percentage) Input a value, find where, on a scale of 0-100, it applies.
 
   function toStepping(xVal, xPct, value) {
@@ -227,6 +447,7 @@ $(document).ready(function() {
     pb = xPct[j];
     return pa + (toPercentage([va, vb], value) / subRangeRatio(pa, pb));
   }
+
   // (value) Input a percentage, find where it is on the specified range.
 
   function fromStepping(xVal, xPct, value) {
@@ -242,6 +463,7 @@ $(document).ready(function() {
     pb = xPct[j];
     return isPercentage([va, vb], (value - pa) * subRangeRatio(pa, pb));
   }
+
   // (percentage) Get the step that applies at a certain value.
 
   function getStep(xPct, xSteps, snap, value) {
@@ -265,17 +487,18 @@ $(document).ready(function() {
     }
     return xPct[j - 1] + closest(value - xPct[j - 1], xSteps[j - 1]);
   }
+
   // Entry parsing
 
   function handleEntryPoint(index, value, that) {
     var percentage;
     // Wrap numerical input in an array.
-    if (typeof value === "number") {
+    if (typeof value === 'number') {
       value = [value];
     }
     // Reject any invalid input, by testing whether value is an array.
     if (Object.prototype.toString.call(value) !== '[object Array]') {
-      throw new Error("noUiSlider: 'range' contains invalid value.");
+      throw new Error('noUiSlider: \'range\' contains invalid value.');
     }
     // Covert min/max syntax to 0 and 100.
     if (index === 'min') {
@@ -287,7 +510,7 @@ $(document).ready(function() {
     }
     // Check for correct input.
     if (!isNumeric(percentage) || !isNumeric(value[0])) {
-      throw new Error("noUiSlider: 'range' value isn't numeric.");
+      throw new Error('noUiSlider: \'range\' value isn\'t numeric.');
     }
     // Store values.
     that.xPct.push(percentage);
@@ -314,6 +537,7 @@ $(document).ready(function() {
       that.xVal[i], that.xVal[i + 1]
     ], n) / subRangeRatio(that.xPct[i], that.xPct[i + 1]);
   }
+
   // Interface
   // The interface to Spectrum handles all direction-based
   // conversions, so the above values are unaware.
@@ -325,7 +549,7 @@ $(document).ready(function() {
     this.xNumSteps = [false];
     this.snap = snap;
     this.direction = direction;
-    var index, ordered = [ /* [0, 'min'], [1, '50%'], [2, 'max'] */ ];
+    var index, ordered = [ /* [0, 'min'], [1, '50%'], [2, 'max'] */];
     // Map the object keys to an array.
     for (index in entry) {
       if (entry.hasOwnProperty(index)) {
@@ -333,12 +557,12 @@ $(document).ready(function() {
       }
     }
     // Sort all entries by value (numeric sort).
-    if (ordered.length && typeof ordered[0][0] === "object") {
-      ordered.sort(function(a, b) {
+    if (ordered.length && typeof ordered[0][0] === 'object') {
+      ordered.sort(function (a, b) {
         return a[0][0] - b[0][0];
       });
     } else {
-      ordered.sort(function(a, b) {
+      ordered.sort(function (a, b) {
         return a[0] - b[0];
       });
     }
@@ -354,11 +578,12 @@ $(document).ready(function() {
       handleStepPoint(index, this.xNumSteps[index], this);
     }
   }
-  Spectrum.prototype.getMargin = function(value) {
+
+  Spectrum.prototype.getMargin = function (value) {
     return this.xPct.length === 2 ? fromPercentage(this.xVal, value) :
       false;
   };
-  Spectrum.prototype.toStepping = function(value) {
+  Spectrum.prototype.toStepping = function (value) {
     value = toStepping(this.xVal, this.xPct, value);
     // Invert the value if this is a right-to-left slider.
     if (this.direction) {
@@ -366,14 +591,14 @@ $(document).ready(function() {
     }
     return value;
   };
-  Spectrum.prototype.fromStepping = function(value) {
+  Spectrum.prototype.fromStepping = function (value) {
     // Invert the value if this is a right-to-left slider.
     if (this.direction) {
       value = 100 - value;
     }
     return accurateNumber(fromStepping(this.xVal, this.xPct, value));
   };
-  Spectrum.prototype.getStep = function(value) {
+  Spectrum.prototype.getStep = function (value) {
     // Find the proper step for rtl sliders by search in inverse direction.
     // Fixes issue #262.
     if (this.direction) {
@@ -385,7 +610,7 @@ $(document).ready(function() {
     }
     return value;
   };
-  Spectrum.prototype.getApplicableStep = function(value) {
+  Spectrum.prototype.getApplicableStep = function (value) {
     // If the value is 100%, return the negative step twice.
     var j = getJ(value, this.xPct),
       offset = value === 100 ? 2 : 1;
@@ -393,7 +618,7 @@ $(document).ready(function() {
     j - offset]];
   };
   // Outside testing
-  Spectrum.prototype.convert = function(value) {
+  Spectrum.prototype.convert = function (value) {
     return this.getStep(this.toStepping(value));
   };
   /*	Every input option is tested and parsed. This'll prevent
@@ -409,7 +634,7 @@ $(document).ready(function() {
 	or true when everything is OK. It can also modify the option
 	object, to make sure all values can be correctly looped elsewhere. */
   var defaultFormatter = {
-    'to': function(value) {
+    'to': function (value) {
       return value !== undefined && value.toFixed(2);
     },
     'from': Number
@@ -417,7 +642,7 @@ $(document).ready(function() {
 
   function testStep(parsed, entry) {
     if (!isNumeric(entry)) {
-      throw new Error("noUiSlider: 'step' is not numeric.");
+      throw new Error('noUiSlider: \'step\' is not numeric.');
     }
     // The step option can still be used to set stepping
     // for linear sliders. Overwritten if set in 'range'.
@@ -427,16 +652,16 @@ $(document).ready(function() {
   function testRange(parsed, entry) {
     // Filter incorrect input.
     if (typeof entry !== 'object' || Array.isArray(entry)) {
-      throw new Error("noUiSlider: 'range' is not an object.");
+      throw new Error('noUiSlider: \'range\' is not an object.');
     }
     // Catch missing start or end.
     if (entry.min === undefined || entry.max === undefined) {
-      throw new Error("noUiSlider: Missing 'min' or 'max' in 'range'.");
+      throw new Error('noUiSlider: Missing \'min\' or \'max\' in \'range\'.');
     }
     // Catch equal start or end.
     if (entry.min === entry.max) {
       throw new Error(
-        "noUiSlider: 'range' 'min' and 'max' cannot be equal.");
+        'noUiSlider: \'range\' \'min\' and \'max\' cannot be equal.');
     }
     parsed.spectrum = new Spectrum(entry, parsed.snap, parsed.dir, parsed
       .singleStep);
@@ -447,7 +672,7 @@ $(document).ready(function() {
     // Validate input. Values aren't tested, as the public .val method
     // will always provide a valid location.
     if (!Array.isArray(entry) || !entry.length || entry.length > 2) {
-      throw new Error("noUiSlider: 'start' option is incorrect.");
+      throw new Error('noUiSlider: \'start\' option is incorrect.');
     }
     // Store the number of handles.
     parsed.handles = entry.length;
@@ -460,7 +685,7 @@ $(document).ready(function() {
     // Enforce 100% stepping within subranges.
     parsed.snap = entry;
     if (typeof entry !== 'boolean') {
-      throw new Error("noUiSlider: 'snap' option must be a boolean.");
+      throw new Error('noUiSlider: \'snap\' option must be a boolean.');
     }
   }
 
@@ -468,7 +693,7 @@ $(document).ready(function() {
     // Enforce 100% stepping within subranges.
     parsed.animate = entry;
     if (typeof entry !== 'boolean') {
-      throw new Error("noUiSlider: 'animate' option must be a boolean.");
+      throw new Error('noUiSlider: \'animate\' option must be a boolean.');
     }
   }
 
@@ -483,7 +708,7 @@ $(document).ready(function() {
       parsed.connect = 0;
     } else {
       throw new Error(
-        "noUiSlider: 'connect' option doesn't match handle count.");
+        'noUiSlider: \'connect\' option doesn\'t match handle count.');
     }
   }
 
@@ -498,13 +723,13 @@ $(document).ready(function() {
         parsed.ort = 1;
         break;
       default:
-        throw new Error("noUiSlider: 'orientation' option is invalid.");
+        throw new Error('noUiSlider: \'orientation\' option is invalid.');
     }
   }
 
   function testMargin(parsed, entry) {
     if (!isNumeric(entry)) {
-      throw new Error("noUiSlider: 'margin' option must be numeric.");
+      throw new Error('noUiSlider: \'margin\' option must be numeric.');
     }
     // Issue #582
     if (entry === 0) {
@@ -513,19 +738,19 @@ $(document).ready(function() {
     parsed.margin = parsed.spectrum.getMargin(entry);
     if (!parsed.margin) {
       throw new Error(
-        "noUiSlider: 'margin' option is only supported on linear sliders."
+        'noUiSlider: \'margin\' option is only supported on linear sliders.'
       );
     }
   }
 
   function testLimit(parsed, entry) {
     if (!isNumeric(entry)) {
-      throw new Error("noUiSlider: 'limit' option must be numeric.");
+      throw new Error('noUiSlider: \'limit\' option must be numeric.');
     }
     parsed.limit = parsed.spectrum.getMargin(entry);
     if (!parsed.limit) {
       throw new Error(
-        "noUiSlider: 'limit' option is only supported on linear sliders."
+        'noUiSlider: \'limit\' option is only supported on linear sliders.'
       );
     }
   }
@@ -544,7 +769,7 @@ $(document).ready(function() {
         break;
       default:
         throw new Error(
-          "noUiSlider: 'direction' option was not recognized.");
+          'noUiSlider: \'direction\' option was not recognized.');
     }
   }
 
@@ -552,7 +777,7 @@ $(document).ready(function() {
     // Make sure the input is a string.
     if (typeof entry !== 'string') {
       throw new Error(
-        "noUiSlider: 'behaviour' must be a string containing options.");
+        'noUiSlider: \'behaviour\' must be a string containing options.');
     }
     // Check if the string contains any keywords.
     // None are required.
@@ -564,7 +789,7 @@ $(document).ready(function() {
     // Fix #472
     if (drag && !parsed.connect) {
       throw new Error(
-        "noUiSlider: 'drag' behaviour must be used with 'connect': true."
+        'noUiSlider: \'drag\' behaviour must be used with \'connect\': true.'
       );
     }
     parsed.events = {
@@ -589,13 +814,13 @@ $(document).ready(function() {
       parsed.tooltips = asArray(entry);
       if (parsed.tooltips.length !== parsed.handles) {
         throw new Error(
-          "noUiSlider: must pass a formatter for all handles.");
+          'noUiSlider: must pass a formatter for all handles.');
       }
-      parsed.tooltips.forEach(function(formatter) {
+      parsed.tooltips.forEach(function (formatter) {
         if (typeof formatter !== 'boolean' && (typeof formatter !==
           'object' || typeof formatter.to !== 'function')) {
           throw new Error(
-            "noUiSlider: 'tooltips' must be passed a formatter or 'false'."
+            'noUiSlider: \'tooltips\' must be passed a formatter or \'false\'.'
           );
         }
       });
@@ -610,15 +835,16 @@ $(document).ready(function() {
       return true;
     }
     throw new Error(
-      "noUiSlider: 'format' requires 'to' and 'from' methods.");
+      'noUiSlider: \'format\' requires \'to\' and \'from\' methods.');
   }
 
   function testCssPrefix(parsed, entry) {
     if (entry !== undefined && typeof entry !== 'string') {
-      throw new Error("noUiSlider: 'cssPrefix' must be a string.");
+      throw new Error('noUiSlider: \'cssPrefix\' must be a string.');
     }
     parsed.cssPrefix = entry;
   }
+
   // Test all developer settings and parse to assumption-safe values.
 
   function testOptions(options) {
@@ -700,11 +926,11 @@ $(document).ready(function() {
     // Run all options through a testing mechanism to ensure correct
     // input. It should be noted that options might get modified to
     // be handled properly. E.g. wrapping integers in arrays.
-    Object.keys(tests).forEach(function(name) {
+    Object.keys(tests).forEach(function (name) {
       // If the option isn't set, but it is required, throw an error.
       if (options[name] === undefined && defaults[name] === undefined) {
         if (tests[name].r) {
-          throw new Error("noUiSlider: '" + name + "' is required.");
+          throw new Error('noUiSlider: \'' + name + '\' is required.');
         }
         return true;
       }
@@ -776,6 +1002,7 @@ $(document).ready(function() {
       /* 22 */
       , 'value'
     ].map(addCssPrefix(options.cssPrefix || defaultCssPrefix));
+
     // Delimit proposed values for handle positions.
     function getPositions(a, b, delimit) {
       // Add movement to current position.
@@ -795,6 +1022,7 @@ $(document).ready(function() {
       }
       return [c, d];
     }
+
     // Provide a clean event with standardized offset values.
 
     function fixEvent(e, pageOffset) {
@@ -828,6 +1056,7 @@ $(document).ready(function() {
       event.cursor = mouse || pointer; // Fix #435
       return event;
     }
+
     // Append a handle to the base.
 
     function addHandle(direction, index) {
@@ -843,6 +1072,7 @@ $(document).ready(function() {
       origin.appendChild(handle);
       return origin;
     }
+
     // Add the proper connection classes.
 
     function addConnection(connect, target, handles) {
@@ -866,6 +1096,7 @@ $(document).ready(function() {
           break;
       }
     }
+
     // Add handles to the slider base.
 
     function addHandles(nrHandles, direction, base) {
@@ -877,6 +1108,7 @@ $(document).ready(function() {
       }
       return handles;
     }
+
     // Initialize a single slider.
 
     function addSlider(direction, orientation, target) {
@@ -898,6 +1130,7 @@ $(document).ready(function() {
       element.className = cssClasses[18];
       return handle.firstChild.appendChild(element);
     }
+
     // The tooltips option is a shorthand for using the 'update' event.
 
     function tooltips() {
@@ -910,7 +1143,7 @@ $(document).ready(function() {
         tips.reverse();
         options.tooltips.reverse();
       }
-      bindEvent('update', function(f, o, r) {
+      bindEvent('update', function (f, o, r) {
         if (tips[o]) {
           tips[o].innerHTML = options.tooltips[o] === true ? f[o] :
             options.tooltips[o].to(r[o]);
@@ -936,7 +1169,7 @@ $(document).ready(function() {
       }
       if (mode === 'positions') {
         // Map all percentages to on-range values.
-        return values.map(function(value) {
+        return values.map(function (value) {
           return scope_Spectrum.fromStepping(stepped ?
             scope_Spectrum.getStep(value) : value);
         });
@@ -944,7 +1177,7 @@ $(document).ready(function() {
       if (mode === 'values') {
         // If the value must be stepped, it needs to be converted to a percentage first.
         if (stepped) {
-          return values.map(function(value) {
+          return values.map(function (value) {
             // Convert to percentage, apply step, return to value.
             return scope_Spectrum.fromStepping(scope_Spectrum.getStep(
               scope_Spectrum.toStepping(value)));
@@ -960,6 +1193,7 @@ $(document).ready(function() {
         // Avoid floating point variance by dropping the smallest decimal places.
         return (value + increment).toFixed(7) / 1;
       }
+
       var originalSpectrumDirection = scope_Spectrum.direction,
         indexes = {},
         firstInRange = scope_Spectrum.xVal[0],
@@ -973,7 +1207,7 @@ $(document).ready(function() {
       // believing it is ltr.
       scope_Spectrum.direction = 0;
       // Create a copy of the group, sort it and filter away all duplicates.
-      group = unique(group.slice().sort(function(a, b) {
+      group = unique(group.slice().sort(function (a, b) {
         return a - b;
       }));
       // Make sure the range starts with the first element.
@@ -986,7 +1220,7 @@ $(document).ready(function() {
         group.push(lastInRange);
         ignoreLast = true;
       }
-      group.forEach(function(current, index) {
+      group.forEach(function (current, index) {
         // Get the current step and the lower + upper positions.
         var step, i, q,
           low = current,
@@ -1083,8 +1317,9 @@ $(document).ready(function() {
             '>' + formatter.to(values[0]) + '</div>';
         }
       }
+
       // Append all points.
-      Object.keys(spread).forEach(function(a) {
+      Object.keys(spread).forEach(function (a) {
         addSpread(a, spread[a]);
       });
       element.innerHTML = out;
@@ -1104,6 +1339,7 @@ $(document).ready(function() {
         };
       return scope_Target.appendChild(addMarking(spread, filter, format));
     }
+
     // Shorthand for base dimensions.
 
     function baseSize() {
@@ -1112,16 +1348,17 @@ $(document).ready(function() {
       return options.ort === 0 ? (rect.width || scope_Base[alt]) : (
         rect.height || scope_Base[alt]);
     }
+
     // External event handling
 
     function fireEvent(event, handleNumber, tap) {
       if (handleNumber !== undefined && options.handles !== 1) {
         handleNumber = Math.abs(handleNumber - options.dir);
       }
-      Object.keys(scope_Events).forEach(function(targetEvent) {
+      Object.keys(scope_Events).forEach(function (targetEvent) {
         var eventType = targetEvent.split('.')[0];
         if (event === eventType) {
-          scope_Events[targetEvent].forEach(function(callback) {
+          scope_Events[targetEvent].forEach(function (callback) {
             callback.call(
               // Use the slider public API as the scope ('this')
               scope_Self,
@@ -1140,6 +1377,7 @@ $(document).ready(function() {
         }
       });
     }
+
     // Returns the input array, respecting the slider direction configuration.
 
     function inSliderOrder(values) {
@@ -1152,12 +1390,13 @@ $(document).ready(function() {
       }
       return values;
     }
+
     // Handler for attaching events trough a proxy.
 
     function attach(events, element, callback, data) {
       // This function can be used to 'filter' events to the slider.
       // element is a node, not a nodeList
-      var method = function(e) {
+      var method = function (e) {
           if (scope_Target.hasAttribute('disabled')) {
             return false;
           }
@@ -1181,12 +1420,13 @@ $(document).ready(function() {
         },
         methods = [];
       // Bind a closure on the target for every event type.
-      events.split(' ').forEach(function(eventName) {
+      events.split(' ').forEach(function (eventName) {
         element.addEventListener(eventName, method, false);
         methods.push([eventName, method]);
       });
       return methods;
     }
+
     // Handle movement on document for handle and range drag.
 
     function move(event, data) {
@@ -1195,7 +1435,7 @@ $(document).ready(function() {
       // https://connect.microsoft.com/IE/feedback/details/927005/mobile-ie10-windows-phone-buttons-property-of-pointermove-event-always-zero
       // IE9 has .buttons and .which zero on mousemove.
       // Firefox breaks the spec MDN defines.
-      if (navigator.appVersion.indexOf("MSIE 9") === -1 && event.buttons ===
+      if (navigator.appVersion.indexOf('MSIE 9') === -1 && event.buttons ===
         0 && data.buttonsProperty !== 0) {
         return end(event, data);
       }
@@ -1223,6 +1463,7 @@ $(document).ready(function() {
         fireEvent('slide', handleNumber);
       }
     }
+
     // Unbind move events on document, call callbacks.
 
     function end(event, data) {
@@ -1239,7 +1480,7 @@ $(document).ready(function() {
       }
       var d = document.documentElement;
       // Unbind the move and end events, which are added on 'start'.
-      d.noUiListeners.forEach(function(c) {
+      d.noUiListeners.forEach(function (c) {
         d.removeEventListener(c[0], c[1]);
       });
       // Remove dragging class.
@@ -1252,14 +1493,16 @@ $(document).ready(function() {
         fireEvent('end', data.handleNumber);
       }
     }
+
     // Fire 'end' when a mouse or pen leaves the document.
 
     function documentLeave(event, data) {
-      if (event.type === "mouseout" && event.target.nodeName === "HTML" &&
+      if (event.type === 'mouseout' && event.target.nodeName === 'HTML' &&
         event.relatedTarget === null) {
         end(event, data);
       }
     }
+
     // Bind move events on document.
 
     function start(event, data) {
@@ -1293,7 +1536,7 @@ $(document).ready(function() {
           handles: data.handles,
           handleNumber: data.handleNumber
         });
-      var outEvent = attach("mouseout", d, documentLeave, {
+      var outEvent = attach('mouseout', d, documentLeave, {
         handles: data.handles,
         handleNumber: data.handleNumber
       });
@@ -1307,7 +1550,7 @@ $(document).ready(function() {
         if (scope_Handles.length > 1) {
           addClass(scope_Target, cssClasses[12]);
         }
-        var f = function() {
+        var f = function () {
           return false;
         };
         document.body.noUiListener = f;
@@ -1318,6 +1561,7 @@ $(document).ready(function() {
         fireEvent('start', data.handleNumber);
       }
     }
+
     // Move closest handle to tapped location.
 
     function tap(event) {
@@ -1327,7 +1571,7 @@ $(document).ready(function() {
       // The tap event shouldn't propagate up and cause 'edge' to run.
       event.stopPropagation();
       // Add up the handle offsets.
-      scope_Handles.forEach(function(a) {
+      scope_Handles.forEach(function (a) {
         total += offset(a)[options.style];
       });
       // Find the handle closest to the tapped position.
@@ -1361,20 +1605,22 @@ $(document).ready(function() {
         });
       }
     }
+
     // Fires a 'hover' event for a hovered mouse/pen position.
 
     function hover(event) {
       var location = event.calcPoint - offset(scope_Base)[options.style],
         to = scope_Spectrum.getStep((location * 100) / baseSize()),
         value = scope_Spectrum.fromStepping(to);
-      Object.keys(scope_Events).forEach(function(targetEvent) {
+      Object.keys(scope_Events).forEach(function (targetEvent) {
         if ('hover' === targetEvent.split('.')[0]) {
-          scope_Events[targetEvent].forEach(function(callback) {
+          scope_Events[targetEvent].forEach(function (callback) {
             callback.call(scope_Self, value);
           });
         }
       });
     }
+
     // Attach events to several slider parts.
 
     function events(behaviour) {
@@ -1402,7 +1648,7 @@ $(document).ready(function() {
           hover: true
         });
         for (i = 0; i < scope_Handles.length; i += 1) {
-          ['mousemove MSPointerMove pointermove'].forEach(function(
+          ['mousemove MSPointerMove pointermove'].forEach(function (
             eventName) {
             scope_Handles[i].children[0].addEventListener(eventName,
               stopPropagation, false);
@@ -1421,13 +1667,14 @@ $(document).ready(function() {
           drag.push(scope_Handles[(drag[0] === scope_Handles[0] ? 1 : 0)]
             .children[0]);
         }
-        drag.forEach(function(element) {
+        drag.forEach(function (element) {
           attach(actions.start, element, start, {
             handles: scope_Handles
           });
         });
       }
     }
+
     // Test suggested values and apply margin, step.
 
     function setHandle(handle, to, noLimitOption) {
@@ -1466,7 +1713,7 @@ $(document).ready(function() {
       // No significant effect in Chrome, Edge sees dramatic
       // performace improvements.
       if (window.requestAnimationFrame) {
-        window.requestAnimationFrame(function() {
+        window.requestAnimationFrame(function () {
           handle.style[options.style] = to + '%';
         });
       } else {
@@ -1486,6 +1733,7 @@ $(document).ready(function() {
       fireEvent('update', trigger);
       return true;
     }
+
     // Loop values from value method and apply them.
 
     function setValues(count, values) {
@@ -1519,6 +1767,7 @@ $(document).ready(function() {
         }
       }
     }
+
     // Set the slider value.
 
     function valueSet(input) {
@@ -1548,6 +1797,11 @@ $(document).ready(function() {
         }
       }
     }
+
+    function valueReset(fireSetEvent) {
+      valueSet(options.start, fireSetEvent);
+    }
+
     // Get the slider value.
 
     function valueGet() {
@@ -1558,10 +1812,11 @@ $(document).ready(function() {
       }
       return inSliderOrder(retour);
     }
+
     // Removes classes from the root and empties it.
 
     function destroy() {
-      cssClasses.forEach(function(cls) {
+      cssClasses.forEach(function (cls) {
         if (!cls) {
           return;
         } // Ignore empty classes
@@ -1572,12 +1827,13 @@ $(document).ready(function() {
       }
       delete scope_Target.noUiSlider;
     }
+
     // Get the current step size for the slider.
 
     function getCurrentStep() {
       // Check all locations, map them to their stepping point.
       // Get the step point, then find it in the input list.
-      var retour = scope_Locations.map(function(location, index) {
+      var retour = scope_Locations.map(function (location, index) {
         var step = scope_Spectrum.getApplicableStep(location),
           // As per #391, the comparison for the decrement step can have some rounding issues.
           // Round the value to the precision used in the step.
@@ -1599,6 +1855,7 @@ $(document).ready(function() {
       // Return values in the proper order.
       return inSliderOrder(retour);
     }
+
     // Attach an event to this slider, possibly including a namespace
 
     function bindEvent(namespacedEvent, callback) {
@@ -1606,17 +1863,18 @@ $(document).ready(function() {
       scope_Events[namespacedEvent].push(callback);
       // If the event bound is 'update,' fire it immediately for all handles.
       if (namespacedEvent.split('.')[0] === 'update') {
-        scope_Handles.forEach(function(a, index) {
+        scope_Handles.forEach(function (a, index) {
           fireEvent('update', index);
         });
       }
     }
+
     // Undo attachment of event
 
     function removeEvent(namespacedEvent) {
       var event = namespacedEvent.split('.')[0],
         namespace = namespacedEvent.substring(event.length);
-      Object.keys(scope_Events).forEach(function(bind) {
+      Object.keys(scope_Events).forEach(function (bind) {
         var tEvent = bind.split('.')[0],
           tNamespace = bind.substring(tEvent.length);
         if ((!event || event === tEvent) && (!namespace ||
@@ -1625,6 +1883,7 @@ $(document).ready(function() {
         }
       });
     }
+
     // Updateable: margin, limit, step, range, animate, snap
 
     function updateOptions(optionsToUpdate) {
@@ -1639,7 +1898,7 @@ $(document).ready(function() {
           snap: optionsToUpdate.snap === undefined ? options.snap : optionsToUpdate
             .snap
         });
-      ['margin', 'limit', 'step', 'range', 'animate'].forEach(function(
+      ['margin', 'limit', 'step', 'range', 'animate'].forEach(function (
         name) {
         if (optionsToUpdate[name] !== undefined) {
           options[name] = optionsToUpdate[name];
@@ -1656,6 +1915,7 @@ $(document).ready(function() {
         fireEvent('update', i);
       }
     }
+
     // Throw an error if the slider was already initialized.
     if (scope_Target.noUiSlider) {
       throw new Error('Slider was already initialized.');
@@ -1679,6 +1939,7 @@ $(document).ready(function() {
       off: removeEvent,
       get: valueGet,
       set: valueSet,
+      reset: valueReset,
       updateOptions: updateOptions,
       options: options, // Issue #600
       target: scope_Target, // Issue #597
@@ -1688,6 +1949,7 @@ $(document).ready(function() {
     events(options.events);
     return scope_Self;
   }
+
   // Run the standard initializer
 
   function initialize(target, originalOptions) {
@@ -1702,13 +1964,14 @@ $(document).ready(function() {
     target.noUiSlider = slider;
     return slider;
   }
+
   // Use an object instead of a function for future expansibility;
   return {
     create: initialize
   };
 }));
 // wNumb number formatter: https://refreshless.com/wnumb/
-(function() {
+(function () {
   'use strict';
   var
     /** @const */
@@ -1720,16 +1983,19 @@ $(document).ready(function() {
   function strReverse(a) {
     return a.split('').reverse().join('');
   }
+
   // Check if a string starts with a specified prefix.
 
   function strStartsWith(input, match) {
     return input.substring(0, match.length) === match;
   }
+
   // Check is a string ends in a specified postfix.
 
   function strEndsWith(input, match) {
     return input.slice(-1 * match.length) === match;
   }
+
   // Throw an error if formatting options are incompatible.
 
   function throwEqualError(F, a, b) {
@@ -1737,17 +2003,20 @@ $(document).ready(function() {
       throw new Error(a);
     }
   }
+
   // Check if a number is finite and not NaN
 
   function isValidNumber(input) {
     return typeof input === 'number' && isFinite(input);
   }
+
   // Provide rounding-accurate toFixed method.
 
   function toFixed(value, decimals) {
     var scale = Math.pow(10, decimals);
     return (Math.round(value * scale) / scale).toFixed(decimals);
   }
+
   // Formatting
   // Accept a number as input, output formatted string.
 
@@ -1824,6 +2093,7 @@ $(document).ready(function() {
     // All done.
     return output;
   }
+
   // Accept a sting as input, output decoded number.
 
   function formatFrom(decimals, thousand, mark, prefix, postfix, encoder,
@@ -1890,6 +2160,7 @@ $(document).ready(function() {
     }
     return output;
   }
+
   // Framework
   // Validate formatting options
 
@@ -1941,6 +2212,7 @@ $(document).ready(function() {
     throwEqualError(filteredOptions, 'prefix', 'negativeBefore');
     return filteredOptions;
   }
+
   // Pass all options as function arguments
 
   function passAll(options, method, input) {
@@ -1954,25 +2226,27 @@ $(document).ready(function() {
     args.push(input);
     return method.apply('', args);
   }
+
   /** @constructor */
 
   function wNumb(options) {
     if (!(this instanceof wNumb)) {
       return new wNumb(options);
     }
-    if (typeof options !== "object") {
+    if (typeof options !== 'object') {
       return;
     }
     options = validate(options);
     // Call 'formatTo' with proper arguments.
-    this.to = function(input) {
+    this.to = function (input) {
       return passAll(options, formatTo, input);
     };
     // Call 'formatFrom' with proper arguments.
-    this.from = function(input) {
+    this.from = function (input) {
       return passAll(options, formatFrom, input);
     };
   }
+
   /** @export */
   window.wNumb = wNumb;
 }());

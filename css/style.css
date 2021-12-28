@@ -5,6 +5,7 @@
     Author:     trungnghia112 <trungnghia112@gmail.com>
 
 -----------------------------------------------------------------------------------*/
+@import '../fonts/fontawesome/css/all.min.css';
 @import url("../../fonts/NexaHeavy.css");
 /*!
  * Bootstrap v5.1.0 (https://getbootstrap.com/)
@@ -11138,6 +11139,25 @@ textarea.form-control-lg {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%2350d500' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
 }
 
+.skill-search-box .has-search .form-control {
+  padding-left: 2.375rem;
+  background-color: #022d5e;
+  border: 1px solid #022d5e;
+  border-radius: 0.75rem;
+  color: #ffffff;
+}
+.skill-search-box .has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #ffffff;
+}
+
 .nav-custom {
   position: relative;
   display: -webkit-box;
@@ -11360,10 +11380,12 @@ body {
   color: #ffffff;
   text-transform: uppercase;
 }
-.main-split .main-menu-left .menu-clear a.clear-filter {
+.main-split .main-menu-left .menu-clear button.clear-filter {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+  border: none;
+  background: transparent;
 }
 .main-split .main-menu-left .menu-tabs ul.nav {
   -webkit-box-pack: center;
@@ -11444,7 +11466,46 @@ body {
   margin-top: 0.5rem;
   margin-left: 0.5rem;
 }
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider {
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-form-check {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  justify-content: space-around;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-form-check .form-check {
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .skill-body .skill-list {
+  margin: 1rem 0;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .skill-body .skill-list .skill-item {
+  margin: 1.5rem 0;
+  position: relative;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .skill-body .skill-list .skill-item .skill-name {
+  position: absolute;
+  top: 0.2rem;
+  left: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem 0.3rem 1.25rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+  z-index: -1;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .skill-body .skill-list .skill-item.active .skill-name {
+  background-color: #0d4381;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider {
   /* This line can be removed it was just for display on CodePen: */
   /* Functional styling;
    * These styles are required for noUiSlider to function.
@@ -11470,131 +11531,7 @@ body {
   /* Disabled state;
    */
 }
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .slider-labels {
-  margin-top: 10px;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-target, .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-target * {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -ms-touch-action: none;
-  touch-action: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-target {
-  position: relative;
-  direction: ltr;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-base {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-  /* Fix 401 */
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-origin {
-  position: absolute;
-  right: 0;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-handle {
-  position: relative;
-  z-index: 1;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-stacking .noUi-handle {
-  /* This class is applied to the lower origin when
-     its values is > 50%. */
-  z-index: 10;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-state-tap .noUi-origin {
-  -webkit-transition: left 0.3s, top 0.3s;
-  transition: left 0.3s, top 0.3s;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-state-drag * {
-  cursor: inherit !important;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-base, .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-handle {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-horizontal {
-  height: 4px;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-horizontal .noUi-handle {
-  width: 12px;
-  height: 6px;
-  left: -7px;
-  top: -1px;
-  background: #ffffff;
-  position: relative;
-  -webkit-box-shadow: 0px 0px 285px 23px rgba(111, 171, 235, 0.93);
-  -moz-box-shadow: 0px 0px 285px 23px rgba(111, 171, 235, 0.93);
-  box-shadow: 0px 0px 285px 23px red;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-horizontal .noUi-handle:before {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 4px solid #ffffff;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-horizontal .noUi-handle:after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 4px solid #ffffff;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-background {
-  background: #023875;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-connect {
-  background: #ffffff;
-  -webkit-transition: background 450ms;
-  transition: background 450ms;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-origin {
-  border-radius: 2px;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-target {
-  border-radius: 2px;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-draggable {
-  cursor: w-resize;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-vertical .noUi-draggable {
-  cursor: n-resize;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-handle {
-  cursor: default;
-  -webkit-box-sizing: content-box !important;
-  -moz-box-sizing: content-box !important;
-  box-sizing: content-box !important;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider .noUi-handle:active {
-  left: -7px;
-  top: -1px;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider [disabled].noUi-connect, .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider [disabled] .noUi-connect {
-  background: #B8B8B8;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider [disabled].noUi-origin, .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-range-slider [disabled] .noUi-handle {
-  cursor: not-allowed;
-}
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .slider-info {
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .slider-info {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -11606,24 +11543,126 @@ body {
   -moz-justify-content: space-between;
   justify-content: space-between;
 }
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-form-check {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  justify-content: space-around;
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .slider-labels {
+  margin-top: 10px;
 }
-.main-split .main-menu-left .menu-tabs .tab-content .general-body .general-form-check .form-check {
-  padding-left: 0;
-  margin-bottom: 1.25rem;
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-target, .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-target {
+  position: relative;
+  direction: ltr;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-base {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  /* Fix 401 */
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-origin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-handle {
+  position: relative;
+  z-index: 1;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-stacking .noUi-handle {
+  /* This class is applied to the lower origin when
+     its values is > 50%. */
+  z-index: 10;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-state-tap .noUi-origin {
+  -webkit-transition: left 0.3s, top 0.3s;
+  transition: left 0.3s, top 0.3s;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-state-drag * {
+  cursor: inherit !important;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-base, .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-handle {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-horizontal {
+  height: 4px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-horizontal .noUi-handle {
+  width: 12px;
+  height: 6px;
+  left: -7px;
+  top: -1px;
+  background: #ffffff;
+  position: relative;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-horizontal .noUi-handle:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 4px solid #ffffff;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-horizontal .noUi-handle:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 4px solid #ffffff;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-background {
+  background: #023875;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-connect {
+  background: #ffffff;
+  -webkit-transition: background 450ms;
+  transition: background 450ms;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-origin {
+  border-radius: 2px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-target {
+  border-radius: 2px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-draggable {
+  cursor: w-resize;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-vertical .noUi-draggable {
+  cursor: n-resize;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-handle {
+  cursor: default;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
+  box-sizing: content-box !important;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-handle:active {
+  left: -7px;
+  top: -1px;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled].noUi-connect, .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled] .noUi-connect {
+  background: #B8B8B8;
+}
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled].noUi-origin, .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled] .noUi-handle {
+  cursor: not-allowed;
 }
 .main-split .main-menu-left:before {
   content: "";

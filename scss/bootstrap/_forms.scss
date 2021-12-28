@@ -6,7 +6,29 @@
   margin-top: 0;
   background-color: #023875;
   box-shadow: inset 0px 0px 3px 0px #000000b5;
+
   &:checked[type='checkbox'] {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%2350d500' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+  }
+}
+
+.skill-search-box {
+  .has-search .form-control {
+    padding-left: 2.375rem;
+    background-color: #022d5e;
+    border: 1px solid #022d5e;
+    border-radius: 0.75rem;
+    color: #ffffff;
+  }
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #ffffff;
   }
 }
