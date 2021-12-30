@@ -27,10 +27,9 @@ body {
 
   .main-menu-left {
     position: relative;
-    width: 305px;
-    padding-right: 2.5rem;
-    padding-left: 1rem;
-    padding-bottom: 1.5rem;
+    width: 100%;
+    max-width: 280px;
+    padding: 0 0 1.5rem 0.75rem;
     min-height: 100vh;
     z-index: 1;
 
@@ -39,10 +38,12 @@ body {
       @include justify-content(space-between);
       padding-top: 1rem;
       font-size: 1.25rem;
+      user-select: none;
 
       span {
         color: #ffffff;
         text-transform: uppercase;
+        cursor: default;
       }
 
       button.clear-filter {
@@ -51,6 +52,7 @@ body {
         text-decoration: none;
         border: none;
         background: transparent;
+        padding: 0;
       }
     }
 
@@ -116,7 +118,7 @@ body {
           text-align: center;
 
           .general-item {
-            margin-top: 1.5rem;
+            margin: 1.5rem 0.75rem 0 0.25rem;
           }
 
           .menu-header {
@@ -125,10 +127,12 @@ body {
             border-radius: 10px;
             padding: 0.2rem 0;
             margin: 1rem 3.5rem;
+            cursor: default;
+            user-select: none;
           }
 
           .general-rarity {
-            .general-form-check {
+            .common-form-check {
               @include justify-content(space-between !important);
 
               .form-check {
@@ -142,18 +146,26 @@ body {
             }
           }
 
-          .general-form-check {
-            @include flexbox();
-            @include flex-wrap(wrap);
-            @include justify-content(space-around);
+        }
 
-            .form-check {
-              padding-left: 0;
-              margin-bottom: 1.25rem;
-            }
+        .common-form-check {
+          @include flexbox();
+          @include flex-wrap(wrap);
+          @include justify-content(space-around);
+
+          .form-check {
+            padding-left: 0;
+            margin-bottom: 1.25rem;
+            cursor: pointer;
           }
 
+          .form-check-label {
+            cursor: pointer;
+          }
 
+          .form-check-input {
+            cursor: pointer;
+          }
         }
 
         .skill-body {
@@ -191,7 +203,7 @@ body {
         .ability-body {
           .ability-list {
             .ability-item {
-              margin-bottom: 1.25rem;
+              margin: 0 1rem 1.25rem 1rem;
 
               .ability-icon {
                 @include flexbox();
@@ -321,6 +333,7 @@ body {
             top: -1px;
             background: #ffffff;
             position: relative;
+            cursor: ew-resize;
 
             &:before {
               content: "";
@@ -411,8 +424,9 @@ body {
       position: absolute;
       top: -65px;
       bottom: 0;
+      right: 0;
       left: -12px;
-      width: 100%;
+      width: 330px;
       z-index: -1;
       box-shadow: inset -2px 0 25px -1px rgb(0 0 0 / 20%);
     }

@@ -1,6 +1,7 @@
 .navbar {
   padding-top: 0;
   padding-bottom: 0.3rem;
+
   .container-fluid {
     align-items: end;
   }
@@ -8,11 +9,12 @@
   a.navbar-brand {
     @include flexbox();
     @include align-items(end);
+    margin-left: 0.5rem;
   }
 
   a.navbar-brand span {
-    margin-left: 1.2rem;
-    font-size: 2.7rem;
+    margin-left: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #ffffff;
   }
@@ -22,8 +24,8 @@
 
     .cw-button {
       box-shadow: rgba(0, 0, 0, 0.4) 0 5px 0px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       background-color: #e97500;
       border: solid transparent;
       border-radius: 18px;

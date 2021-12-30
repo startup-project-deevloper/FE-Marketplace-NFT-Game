@@ -1,0 +1,72 @@
+.main-item {
+  .main-split {
+    .main-menu-left {
+      .color-body {
+        @include flexbox();
+        justify-content: space-between;
+
+        .color-item {
+          input[type="checkbox"][id^="color"] {
+            display: none;
+          }
+
+          label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+          }
+
+          label:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            transition-duration: 0.4s;
+            transform: scale(0);
+            top: -2px;
+            bottom: 0;
+            left: -2px;
+            right: 0;
+          }
+
+          label img {
+            transition-duration: 0.2s;
+            transform-origin: 50% 50%;
+          }
+
+          :checked + label {
+            border-color: #ddd;
+          }
+
+          :checked + label:before {
+            content: url(../images/color/colorframe.png);
+            transform: scale(1);
+          }
+
+          :checked + label img {
+            z-index: -1;
+          }
+        }
+      }
+
+      .star-body {
+        .common-form-check {
+          @include flex-direction(column !important);
+
+          .form-check {
+            margin-bottom: 2rem;
+            @include flexbox();
+            @include justify-content(space-between);
+            .form-check-label{
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .type-body {
+        margin: 0 0.55rem;
+      }
+    }
+  }
+}
+

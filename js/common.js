@@ -33,9 +33,17 @@ if (Modernizr.touch === true && window.innerWidth <= 767) {
     return scrollbarWidth
   }
 
+  function clearFilter() {
+    function uncheckAll() {
+      document.querySelectorAll('input[type="checkbox"]')
+        .forEach(el => el.checked = false);
+    }
+    document.getElementById('clearFilter').addEventListener('click', uncheckAll)
+  }
 
   function init() {
     getBarwidth()
+    clearFilter()
   }
 
   init()
