@@ -4,7 +4,11 @@
   height: 65px;
   box-shadow: 0 7px 15px 2px rgb(0 0 0 / 30%);
   user-select: none;
-
+  @media (max-width: 1366.98px) {
+    .nav-item {
+      margin: 0.35rem 8rem 0 8rem !important;
+    }
+  }
   @media (max-width: 1199.98px) {
     .nav-item {
       margin: 0.35rem 4rem 0 4rem !important;
@@ -13,6 +17,15 @@
   @media (max-width: 991.98px) {
     .nav-item {
       margin: 0.35rem 2rem 0 2rem !important;
+
+      .nav-link {
+        line-height: 1;
+      }
+    }
+  }
+  @media (max-width: 768.98px) {
+    .nav-item {
+      margin: 0.35rem 1rem 0 1rem !important;
 
       .nav-link {
         line-height: 1;
