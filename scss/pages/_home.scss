@@ -475,7 +475,7 @@ body {
           @include justify-content(flex-start !important);
         }
         .list-monster-col{
-          margin:  0 2rem 2rem 2rem !important;
+          margin:  0 2rem 2rem 1rem !important;
         }
       }
       .list-monster-row {
@@ -486,7 +486,7 @@ body {
       }
 
       .list-monster-col {
-        margin: 0 0 2rem 1rem;
+        margin: 0 0 2rem 2rem;
         color: transparent;
         &:hover{
           color: transparent;
@@ -513,43 +513,42 @@ body {
           padding: 0 0;
         }
       }
-
-      .monster-price-box {
-        @include flexbox();
-        position: relative;
-        background-color: #014077;
-        width: 80%;
-        margin: auto;
-        border: 3px solid #000000;
-        border-radius: 1rem;
-        user-select: none;
-
-        .monster-price {
-          background-color: #172a52;
-          padding: 0 2.5px 0 5px;
-          border-top-left-radius: 0.8rem;
-          border-bottom-left-radius: 0.8rem;
-
-        &:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 40px;
-          bottom: 0;
-          width: 0;
-          height: 0;
-          border-top: 44px solid #172a52;
-          border-right: 20px solid transparent;
-        }
-      }
-
-      span.price-number {
-        margin-left: 1.5rem;
-        color: #ffffff;
-        font-size: 1.75rem;
-      }
-    }
   }
 }
+}
 
+.price-box {
+  @include flexbox();
+  position: relative;
+  background-color: #014077;
+  width: 80%;
+  margin: auto;
+  border: 3px solid #000000;
+  border-radius: 1rem;
+  user-select: none;
+
+  .price {
+    background-color: #172a52;
+    padding: 0 2.5px 0 5px;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 40px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-top: 44px solid #172a52;
+      border-right: 20px solid transparent;
+    }
+  }
+
+  span.price-number {
+    margin-left: 1.5rem;
+    color: #ffffff;
+    font-size: 1.75rem;
+  }
 }

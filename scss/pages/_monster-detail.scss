@@ -1,0 +1,34 @@
+.nav-custom{
+  .nav-item{
+    .nav-link{
+      font-size: 2rem;
+    }
+  }
+}
+
+.main-detail{
+  margin-top: 3rem;
+  .monster-img-detail{
+    img{
+      width: 100%;
+    }
+  }
+  .price-box{
+    width: 70%;
+    .price{
+      &:after{
+        left: 65px;
+        border-top: 75px solid #172a52;
+        border-right: 30px solid transparent;
+      }
+    }
+    span.price-number{
+      margin-left: 2.25rem;
+      font-size: 2.75rem;
+    }
+  }
+  .special-button{
+    width: 60%;
+    margin: auto;
+  }
+}

@@ -72,13 +72,14 @@
     .main-list-right {
       .list-card {
         @include media-breakpoint-down(xxl) {
-          .list-item-row{
+          .list-item-row {
             @include justify-content(flex-start !important);
           }
-          .list-item-col{
-            margin:  0 2rem 2rem 2rem !important;
+          .list-item-col {
+            margin: 0 2rem 2rem 2rem !important;
           }
         }
+
         .list-item-row {
           @include flexbox();
           @include justify-content(space-between);
@@ -87,7 +88,7 @@
         }
 
         .list-item-col {
-          margin: 0 0 2rem 1rem;
+          margin: 0 0 2rem 2rem;
           color: transparent;
 
           &:hover {
@@ -95,62 +96,6 @@
           }
         }
 
-        .item-img-box {
-          position: relative;
-
-          .item-lv {
-            user-select: none;
-            position: absolute;
-            left: 54%;
-            top: 96%;
-            background-color: #022d5e;
-            transform: translate(-50%, -50%);
-            width: 65%;
-            height: 10%;
-            font-size: 1.2rem;
-            border-radius: 1.5rem;
-            border: 3px solid #000000;
-            color: #ffff;
-            text-align: center;
-            padding: 0 0;
-          }
-        }
-
-        .item-price-box {
-          @include flexbox();
-          position: relative;
-          background-color: #014077;
-          width: 80%;
-          margin: auto;
-          border: 3px solid #000000;
-          border-radius: 1rem;
-          user-select: none;
-
-          .item-price {
-            background-color: #172a52;
-            padding: 0 2.5px 0 5px;
-            border-top-left-radius: 0.8rem;
-            border-bottom-left-radius: 0.8rem;
-
-            &:after {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 40px;
-              bottom: 0;
-              width: 0;
-              height: 0;
-              border-top: 44px solid #172a52;
-              border-right: 20px solid transparent;
-            }
-          }
-
-          span.price-number {
-            margin-left: 1.25rem;
-            color: #ffffff;
-            font-size: 1.75rem;
-          }
-        }
       }
     }
   }
