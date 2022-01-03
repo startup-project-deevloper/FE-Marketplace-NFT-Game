@@ -1,0 +1,22 @@
+/*
+.list-monster-row {
+  @include make-row();
+  margin: 0;
+
+  .list-monster-col {
+    position: relative;
+    width: 80%;
+    margin-bottom: $grid-gutter-width;
+
+    @include media-breakpoint-up(xl) {
+      @include make-col(1, 5);
+    }
+    @include media-breakpoint-down(lg) {
+      @include make-col(1, 4);
+    }
+    @include media-breakpoint-down(md) {
+      @include make-col(1, 2);
+    }
+  }
+}
+*/

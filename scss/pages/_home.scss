@@ -32,11 +32,12 @@ body {
     padding: 0 0 1.5rem 0.75rem;
     min-height: 100vh;
     z-index: 1;
+    margin-right: 2.5rem;
 
     .menu-clear {
       @include flexbox();
       @include justify-content(space-between);
-      padding-top: 1rem;
+      padding-top: 1.5rem;
       font-size: 1.25rem;
       user-select: none;
 
@@ -60,7 +61,7 @@ body {
       ul.nav {
         @include justify-content(center);
         @include flex-wrap(unset);
-        margin: 1rem 0;
+        margin: 1.5rem 0;
 
         li.nav-item {
           border: 2px solid #90c0fa;
@@ -434,5 +435,121 @@ body {
 
   .main-list-right {
     width: 100%;
+    margin-top: 1rem;
+    margin-right: 4rem;
+
+    .list-sort {
+      @include flexbox();
+      @include justify-content(flex-end);
+      margin-bottom: 1rem;
+
+      .sort-box {
+        button {
+          text-transform: uppercase;
+          background-color: #022d5e;
+          color: #ffffff;
+          border-radius: 10px;
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          &.btn-txt {
+            padding: 0.375rem 7rem 0.375rem 0.5rem;
+            border-top-right-radius: 0 !important;
+            border-bottom-right-radius: 0 !important;
+          }
+
+          &.btn-drop {
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+          }
+        }
+      }
+
+    }
+
+    .list-card {
+      @include media-breakpoint-down(xxl) {
+        .list-monster-row{
+          @include justify-content(flex-start !important);
+        }
+        .list-monster-col{
+          margin:  0 2rem 2rem 2rem !important;
+        }
+      }
+      .list-monster-row {
+        @include flexbox();
+        @include justify-content(space-between);
+        @include flex-wrap(wrap);
+        margin-left: 4rem;
+      }
+
+      .list-monster-col {
+        margin: 0 0 2rem 1rem;
+        color: transparent;
+        &:hover{
+          color: transparent;
+        }
+      }
+
+      .monster-img-box {
+        position: relative;
+        margin-bottom: 2px;
+        .monster-lv {
+          user-select: none;
+          position: absolute;
+          left: 54%;
+          top: 96%;
+          background-color: #022d5e;
+          transform: translate(-50%, -50%);
+          width: 65%;
+          height: 10%;
+          font-size: 1.2rem;
+          border-radius: 1.5rem;
+          border: 3px solid #000000;
+          color: #ffff;
+          text-align: center;
+          padding: 0 0;
+        }
+      }
+
+      .monster-price-box {
+        @include flexbox();
+        position: relative;
+        background-color: #014077;
+        width: 80%;
+        margin: auto;
+        border: 3px solid #000000;
+        border-radius: 1rem;
+        user-select: none;
+
+        .monster-price {
+          background-color: #172a52;
+          padding: 0 2.5px 0 5px;
+          border-top-left-radius: 0.8rem;
+          border-bottom-left-radius: 0.8rem;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 40px;
+          bottom: 0;
+          width: 0;
+          height: 0;
+          border-top: 44px solid #172a52;
+          border-right: 20px solid transparent;
+        }
+      }
+
+      span.price-number {
+        margin-left: 1.5rem;
+        color: #ffffff;
+        font-size: 1.75rem;
+      }
+    }
   }
+}
+
 }

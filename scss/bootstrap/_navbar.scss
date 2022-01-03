@@ -20,12 +20,12 @@
   }
 
   .connect-wallet {
-    margin-right: 3rem;
+    margin-right: 4rem;
 
     .cw-button {
-      box-shadow: rgba(0, 0, 0, 0.4) 0 5px 0px,
-      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      box-shadow: rgba(0, 0, 0, 0.4) 0 5px 0,
+      rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0 -3px 0px inset;
       background-color: #e97500;
       border: solid transparent;
       border-radius: 18px;
@@ -34,12 +34,12 @@
       color: #11478c;
       cursor: pointer;
       display: inline-block;
-      font-size: 1rem;
+      font-size: 1.5rem;
       font-weight: bold;
       margin: 0 0 1rem 0;
       outline: none;
       overflow: visible;
-      padding: 15px 20px;
+      padding: 10px;
       text-align: center;
       text-transform: uppercase;
       touch-action: manipulation;
