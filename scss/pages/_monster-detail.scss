@@ -37,14 +37,9 @@
   }
   .monster-info-list{
     .m-info{
-      @include flexbox();
-      @include flex-wrap(wrap);
       background-color: #103565;
       border-radius: 10px;
       padding: 1rem 2rem;
-      &:nth-child(1){
-        @include justify-content(space-between);
-      }
 
       .info-txt{
         color: #ffffff;
@@ -55,5 +50,40 @@
         }
       }
     }
+  }
+}
+.ability-box {
+  @include flexbox();
+  position: relative;
+  background-color: #014077;
+  width: 80%;
+  margin: auto;
+  border: 3px solid #000000;
+  border-radius: 1rem;
+  user-select: none;
+
+  .ability {
+    background-color: #172a52;
+    padding: 0 2.5px 0 5px;
+    border-top-left-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 40px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-top: 44px solid #172a52;
+      border-right: 20px solid transparent;
+    }
+  }
+
+  span.ability-number {
+    margin-left: 1.5rem;
+    color: #ffffff;
+    font-size: 1.75rem;
   }
 }

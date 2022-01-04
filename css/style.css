@@ -6,7 +6,7 @@
 
 -----------------------------------------------------------------------------------*/
 @import '../fonts/fontawesome/css/all.min.css';
-@import url("../../fonts/NexaHeavy.css");
+@import url("../fonts/NexaHeavy.css");
 /*!
  * Bootstrap v5.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -12069,25 +12069,9 @@ body {
   margin: auto;
 }
 .main-detail .monster-info-list .m-info {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   background-color: #103565;
   border-radius: 10px;
   padding: 1rem 2rem;
-}
-.main-detail .monster-info-list .m-info:nth-child(1) {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  justify-content: space-between;
 }
 .main-detail .monster-info-list .m-info .info-txt {
   color: #ffffff;
@@ -12096,5 +12080,42 @@ body {
 }
 .main-detail .monster-info-list .m-info .info-txt .info-img {
   margin-left: 1rem;
+}
+
+.ability-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: #014077;
+  width: 80%;
+  margin: auto;
+  border: 3px solid #000000;
+  border-radius: 1rem;
+  user-select: none;
+}
+.ability-box .ability {
+  background-color: #172a52;
+  padding: 0 2.5px 0 5px;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+.ability-box .ability:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: 44px solid #172a52;
+  border-right: 20px solid transparent;
+}
+.ability-box span.ability-number {
+  margin-left: 1.5rem;
+  color: #ffffff;
+  font-size: 1.75rem;
 }
 /*# sourceMappingURL=style.css.map */
