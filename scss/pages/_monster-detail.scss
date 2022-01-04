@@ -8,13 +8,17 @@
 
 .main-detail{
   margin-top: 3rem;
-  .monster-img-detail{
+  .row{
+    @include justify-content(space-evenly)
+  }
+  .img-detail{
     img{
       width: 100%;
     }
   }
   .price-box{
     width: 70%;
+    margin: 0 auto 3rem auto;
     .price{
       &:after{
         left: 65px;
@@ -30,5 +34,26 @@
   .special-button{
     width: 60%;
     margin: auto;
+  }
+  .monster-info-list{
+    .m-info{
+      @include flexbox();
+      @include flex-wrap(wrap);
+      background-color: #103565;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      &:nth-child(1){
+        @include justify-content(space-between);
+      }
+
+      .info-txt{
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        .info-img{
+          margin-left: 1rem;
+        }
+      }
+    }
   }
 }

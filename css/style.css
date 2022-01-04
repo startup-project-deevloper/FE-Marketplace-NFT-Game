@@ -12041,11 +12041,19 @@ body {
 .main-detail {
   margin-top: 3rem;
 }
-.main-detail .monster-img-detail img {
+.main-detail .row {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
+  justify-content: space-evenly;
+}
+.main-detail .img-detail img {
   width: 100%;
 }
 .main-detail .price-box {
   width: 70%;
+  margin: 0 auto 3rem auto;
 }
 .main-detail .price-box .price:after {
   left: 65px;
@@ -12059,5 +12067,34 @@ body {
 .main-detail .special-button {
   width: 60%;
   margin: auto;
+}
+.main-detail .monster-info-list .m-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background-color: #103565;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+.main-detail .monster-info-list .m-info:nth-child(1) {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+.main-detail .monster-info-list .m-info .info-txt {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.main-detail .monster-info-list .m-info .info-txt .info-img {
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
