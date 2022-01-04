@@ -11234,7 +11234,7 @@ textarea.form-control-lg {
   color: #318fff;
   text-transform: uppercase;
   font-size: 1.8rem;
-  padding-top: 0.3rem;
+  padding-top: 0;
   padding-bottom: 0;
   z-index: 1;
 }
