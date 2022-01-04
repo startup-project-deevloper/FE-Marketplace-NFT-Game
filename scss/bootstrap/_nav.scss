@@ -49,7 +49,7 @@
     z-index: 1;
     align-items: center;
     &:first-child{
-      margin: 0.35rem 4.5rem 0 4.5rem !important;
+      margin: 0 4.5rem 0 4.5rem !important;
     }
     margin: 0.35rem 10rem 0 10rem;
     @include flexbox();
@@ -103,7 +103,7 @@
     }
     .nav-item {
       &:first-child{
-        margin: 0.35rem 6rem 0 6rem !important;
+        margin: 0 6rem 0 6rem !important;
       }
       margin: 0.35rem 8rem 0 8rem;
 

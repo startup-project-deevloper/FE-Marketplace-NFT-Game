@@ -11228,7 +11228,7 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .nav-custom .nav-item:first-child {
-  margin: 0.35rem 4.5rem 0 4.5rem !important;
+  margin: 0 4.5rem 0 4.5rem !important;
 }
 .nav-custom .nav-item .nav-link {
   color: #318fff;
@@ -11271,7 +11271,7 @@ textarea.form-control-lg {
   margin: 0.35rem 8rem 0 8rem;
 }
 .main-item .nav-custom .nav-item:first-child {
-  margin: 0.35rem 6rem 0 6rem !important;
+  margin: 0 6rem 0 6rem !important;
 }
 .main-item .nav-custom .nav-item .nav-link-bottom {
   width: 100% !important;
