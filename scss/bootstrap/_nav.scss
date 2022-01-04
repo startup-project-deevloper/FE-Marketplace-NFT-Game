@@ -33,6 +33,21 @@
     }
   }
 
+  @media (max-width: 568.98px) {
+    .nav-item {
+      &:first-child{
+        margin: auto !important;
+      }
+
+      .nav-link {
+        line-height: 1;
+      }
+      img{
+        padding-right: 1rem !important;
+      }
+    }
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -49,7 +64,7 @@
     z-index: 1;
     align-items: center;
     &:first-child{
-      margin: 0 4.5rem 0 4.5rem !important;
+      margin: 0 4.5rem 0 4.5rem;
     }
     margin: 0.35rem 10rem 0 10rem;
     @include flexbox();
