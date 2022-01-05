@@ -65,6 +65,7 @@
   }
 
   .detail-info-list {
+    user-select: none;
     @media (max-width: 768px) {
       .m-info{
         text-align: center;
@@ -108,6 +109,7 @@
         color: #ffffff;
         text-transform: uppercase;
         font-size: 1.2rem;
+        font-weight: bold;
       }
 
       .info-img {
@@ -132,6 +134,7 @@
     color: #ffff;
     font-size: 2.5rem;
     text-align: center;
+    font-weight: 700;
   }
   .action-button{
     @include flexbox();
@@ -186,6 +189,7 @@
     margin-right: 0.5rem;
     color: #ffffff;
     font-size: 1rem;
+    font-weight: bold;
   }
 }
 
