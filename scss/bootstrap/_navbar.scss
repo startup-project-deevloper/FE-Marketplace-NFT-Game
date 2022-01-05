@@ -79,4 +79,61 @@
   .sp-button:disabled {
     cursor: auto;
   }
+
+  .sp-button-2 {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 5px 0,
+    rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0 -3px 0px inset;
+    background-color: #013c78;
+    border: solid transparent;
+    border-radius: 18px;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #11478c;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    outline: none;
+    overflow: visible;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .sp-button-2:after {
+    background-clip: padding-box;
+    background-color: #057acb;
+    border: solid transparent;
+    border-radius: 14px;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  .sp-button-2:focus {
+    user-select: auto;
+  }
+
+  .sp-button-2:hover:not(:disabled) {
+    filter: brightness(1.1);
+  }
+
+  .sp-button-2:disabled {
+    cursor: auto;
+  }
 }

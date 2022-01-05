@@ -9,12 +9,12 @@
 .main-detail {
   margin-top: 3rem;
 
-  .monster-detail {
+  .body-detail {
     margin: 0;
   }
 
   .row {
-    @include justify-content(space-evenly)
+    @include justify-content(space-evenly);
   }
 
   .img-detail {
@@ -26,7 +26,7 @@
   .price-box {
     width: fit-content;
     margin: 0 auto 2rem auto;
-
+    align-items: center;
     .price {
       &:after {
         left: 65px;
@@ -39,9 +39,9 @@
     }
 
     span.price-number {
-      margin-left: 2.25rem;
-      margin-right: 1.25rem;
-      font-size: 2.75rem;
+      margin-left: 2rem;
+      margin-right: 1rem;
+      font-size: 2.5rem;
     }
   }
 
@@ -52,13 +52,19 @@
       .sp-button {
         margin: 0 0 3rem 0 !important;
       }
+      .sp-button-2 {
+        margin: 0 0 3rem 0 !important;
+      }
     }
     .sp-button {
-      padding: 10px 3rem;
+      padding: 10px 5rem;
+    }
+    .sp-button-2 {
+      padding: 10px 4rem;
     }
   }
 
-  .monster-info-list {
+  .detail-info-list {
     @media (max-width: 768px) {
       .m-info{
         text-align: center;
@@ -83,6 +89,8 @@
       border-radius: 10px;
       padding: 1rem 1rem;
       margin-bottom: 1rem;
+      margin-left: 0;
+      margin-right: 0;
 
       .m-element {
         align-self: center;
@@ -117,6 +125,19 @@
           margin: 0.25rem 0.5rem;
         }
       }
+    }
+  }
+
+  .item-name{
+    color: #ffff;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .action-button{
+    @include flexbox();
+    @include justify-content(space-between);
+    .special-button{
+      margin: 0 0;
     }
   }
 }
@@ -165,5 +186,31 @@
     margin-right: 0.5rem;
     color: #ffffff;
     font-size: 1rem;
+  }
+}
+
+.main-item-detail{
+
+  .detail-info-list{
+    margin-top: 1rem;
+  }
+  .m-info{
+    @media (max-width: 1024.98px) {
+      margin-bottom: 3.5rem !important;
+    }
+    @media (max-width: 768.98px) {
+      margin-bottom: 3rem !important;
+    }
+    margin-bottom: 6rem !important;
+  }
+  .special-button {
+    @media (max-width: 768.98px) {
+      .sp-button {
+        padding: 10px 3rem !important;
+      }
+      .sp-button-2 {
+        padding: 10px 2rem !important;
+      }
+    }
   }
 }
