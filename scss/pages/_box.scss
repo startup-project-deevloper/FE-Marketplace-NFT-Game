@@ -1,0 +1,54 @@
+.main-box{
+  .chest-box{
+    @include flexbox();
+    @include justify-content(center);
+    @include flex-direction(column);
+    text-align: center;
+    .circulation, .chest-txt, .bit-usd{
+      background-color: #103565;
+      width: fit-content;
+      margin: 0 auto 1rem auto;
+      padding: 0.2rem 1rem;
+      border-radius: 10px;
+    }
+    .chest-img{
+      width: fit-content;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .circulation{
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .chest-txt{
+      width: 50%;
+      p{
+        color: #ffffff;
+        margin: 0;
+        padding: 0.5rem 0;
+      }
+    }
+    .bit-usd{
+      color: #ffffff;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      .bit-img{
+        vertical-align: top;
+      }
+      span.b-number{
+        padding-left: 0.5rem;
+      }
+    }
+    .special-button{
+      margin-right: 0 !important;
+      .sp-button{
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
