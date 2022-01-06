@@ -455,6 +455,7 @@ body {
           background-color: #022d5e;
           color: #ffffff;
           border-radius: 10px;
+          font-weight: bold;
 
           &:focus {
             box-shadow: none;
@@ -471,45 +472,98 @@ body {
             border-bottom-left-radius: 0 !important;
           }
         }
+
+        .dropdown-item {
+          font-weight: bold;
+        }
       }
 
     }
 
     .list-card {
       @include media-breakpoint-down(xxl) {
-        .list-monster-row{
-          @include justify-content(flex-start !important);
-        }
-        .list-monster-col{
-          margin:  0 2rem 2rem 1rem !important;
-        }
+        /*        .list-monster-row{
+                  @include justify-content(flex-start !important);
+                }
+                .list-monster-col{
+                  margin:  0 2rem 2rem 1rem !important;
+                }*/
       }
-      .list-monster-row {
-        @include flexbox();
-        @include justify-content(space-between);
-        @include flex-wrap(wrap);
-        margin-left: 4rem;
-      }
+      /*      .list-monster-row {
+              @include flexbox();
+              @include justify-content(space-between);
+              @include flex-wrap(wrap);
+              margin-left: 4rem;
+            }
 
-      .list-monster-col {
-        margin: 0 0 2rem 2rem;
-        color: transparent;
-        &:hover{
-          color: transparent;
-        }
-      }
+            .list-monster-col {
+              margin: 0 0 2rem 2rem;
+              color: transparent;
+              &:hover{
+                color: transparent;
+              }
+            }*/
 
       .monster-img-box {
         position: relative;
-        margin-bottom: 2px;
+        margin: 0 auto 4rem auto;
+        width: fit-content;
+
+        .monster-bg {
+          width: 200px;
+          height: 330px;
+          display: block;
+          margin: auto;
+        }
+
+        .monster-img {
+          position: absolute;
+          top: 45%;
+          left: 51%;
+          transform: translate(-50%, -50%);
+          width: 180px;
+        }
+
+        .monster-class {
+          position: absolute;
+          left: 15px;
+          top: 10px;
+        }
+
+        .monster-rank {
+          position: absolute;
+          top: -8px;
+          right: 0;
+          height: 50px;
+        }
+
+        .monster-info {
+          position: absolute;
+          bottom: 18px;
+          left: 25px;
+
+          .monster-element {
+
+          }
+
+          .monster-name {
+            margin-left: 0.75rem;
+            vertical-align: middle;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+        }
+
         .monster-lv {
           user-select: none;
           position: absolute;
-          left: 54%;
-          top: 96%;
+          left: 52%;
+          top: 102%;
           background-color: #022d5e;
           transform: translate(-50%, -50%);
-          width: 65%;
+          width: 60%;
           height: 10%;
           font-size: 1.2rem;
           font-weight: bold;
@@ -519,14 +573,24 @@ body {
           text-align: center;
           padding: 0 0;
         }
+
+        .price-box {
+          bottom: -67px;
+          left: 20px;
+          width: fit-content;
+          position: absolute;
+
+          .price-number {
+            margin-right: 0.5rem;
+          }
+        }
       }
+    }
   }
-}
 }
 
 .price-box {
   @include flexbox();
-  position: relative;
   background-color: #014077;
   width: 80%;
   margin: auto;
@@ -535,6 +599,7 @@ body {
   user-select: none;
 
   .price {
+    position: relative;
     background-color: #172a52;
     padding: 0 2.5px 0 5px;
     border-top-left-radius: 0.8rem;
