@@ -5,14 +5,13 @@ Header
   border-bottom: 0.3rem solid;
 }
 
-@include media-breakpoint-down(xxl) {
+@include media-breakpoint-down(xl) {
   .box-header{
     @include flex-direction(column);
     @include justify-content(center !important);
     .header-logo{
       order: 1;
       align-self: center;
-      margin: 0.5rem 0 1rem 0;
     }
     .nav-left{
       order: 2;
@@ -29,7 +28,9 @@ Header
   @include flexbox();
   @include justify-content(space-between);
   padding: 0 1rem 0 1rem;
-
+  .header-logo{
+    margin: 0.25rem 0 0.5rem 0;
+  }
   .nav-left {
     @include flexbox();
     align-self: center;
@@ -38,32 +39,36 @@ Header
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
-    .nav-link {
-      padding: 2rem 2rem;
-      color: #ffffff;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      font-weight: bold;
+    li{
+      padding: 1.8rem 1rem;
       &.active{
+
         border-radius: 10px;
         -webkit-box-shadow: inset 0px 0px 50px 8px rgb(0 0 0 / 30%);
         -moz-box-shadow: inset 0px 0px 50px 8px rgb(0 0 0 / 30%);
         box-shadow: inset 0px 0px 50px 8px rgb(0 0 0 / 30%)
       }
     }
+    .nav-link {
+      color: #ffffff;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
   }
 
   .nav-right {
     @include flexbox();
     @include justify-content(flex-end);
+    align-self: center;
     flex-grow: 1;
     flex-basis: 0;
     align-items: center;
     .staking{
       color: #ffffff;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       text-transform: uppercase;
-      padding: 2rem 2rem;
+      padding: 1rem 1rem;
       text-decoration: none;
       font-weight: bold;
     }
@@ -75,7 +80,7 @@ Header
       }
     }
     .dropdown{
-      padding: 1.5rem;
+      padding: 1rem 1rem;
       button:focus{
         box-shadow: none;
       }
@@ -84,7 +89,7 @@ Header
         border: none;
         li{
           a{
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             color: #ffffff;
             font-weight: bold;
             &:hover{
@@ -96,7 +101,7 @@ Header
       button{
         color: #ffffff;
         text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: bold;
       }
     }
