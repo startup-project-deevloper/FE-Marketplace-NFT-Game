@@ -6,7 +6,7 @@
         justify-content: space-between;
 
         .color-item {
-          input[type="checkbox"][id^="color"] {
+          input[type='checkbox'][id^='color'] {
             display: none;
           }
 
@@ -17,7 +17,7 @@
           }
 
           label:before {
-            content: " ";
+            content: ' ';
             display: block;
             position: absolute;
             transition-duration: 0.4s;
@@ -122,4 +122,3 @@
     }
   }
 }
-

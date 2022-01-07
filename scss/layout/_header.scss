@@ -6,18 +6,18 @@ Header
 }
 
 @include media-breakpoint-down(xl) {
-  .box-header{
+  .box-header {
     @include flex-direction(column);
     @include justify-content(center !important);
-    .header-logo{
+    .header-logo {
       order: 1;
       align-self: center;
     }
-    .nav-left{
+    .nav-left {
       order: 2;
       align-self: center;
     }
-    .nav-right{
+    .nav-right {
       order: 3;
       align-self: center;
     }
@@ -28,7 +28,7 @@ Header
   @include flexbox();
   @include justify-content(space-between);
   padding: 0 1rem 0 1rem;
-  .header-logo{
+  .header-logo {
     margin: 0.25rem 0 0.5rem 0;
   }
   .nav-left {
@@ -39,14 +39,13 @@ Header
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
-    li{
+    li {
       padding: 1.8rem 1rem;
-      &.active{
-
+      &.active {
         border-radius: 10px;
         -webkit-box-shadow: inset 0px 0px 50px 8px rgb(0 0 0 / 30%);
         -moz-box-shadow: inset 0px 0px 50px 8px rgb(0 0 0 / 30%);
-        box-shadow: inset 0px 0px 50px 8px rgb(0 0 0 / 30%)
+        box-shadow: inset 0px 0px 50px 8px rgb(0 0 0 / 30%);
       }
     }
     .nav-link {
@@ -64,7 +63,7 @@ Header
     flex-grow: 1;
     flex-basis: 0;
     align-items: center;
-    .staking{
+    .staking {
       color: #ffffff;
       font-size: 1.2rem;
       text-transform: uppercase;
@@ -79,26 +78,26 @@ Header
         margin-bottom: 0;
       }
     }
-    .dropdown{
+    .dropdown {
       padding: 1rem 1rem;
-      button:focus{
+      button:focus {
         box-shadow: none;
       }
-      .dropdown-menu{
+      .dropdown-menu {
         background-color: #1767bd;
         border: none;
-        li{
-          a{
+        li {
+          a {
             font-size: 0.8rem;
             color: #ffffff;
             font-weight: bold;
-            &:hover{
+            &:hover {
               background-color: #103565;
             }
           }
         }
       }
-      button{
+      button {
         color: #ffffff;
         text-transform: uppercase;
         font-size: 1.2rem;
@@ -108,26 +107,25 @@ Header
   }
 }
 
-.box-header-mobile{
+.box-header-mobile {
   display: none;
 }
 
 @include media-breakpoint-down(md) {
-  .box-header{
+  .box-header {
     display: none !important;
   }
-  .box-header-mobile{
+  .box-header-mobile {
     @include flexbox();
     @include justify-content(space-between);
     padding: 0.5rem;
     align-items: center;
-    .special-button{
+    .special-button {
       margin: 0;
-      .sp-button{
+      .sp-button {
         margin: 0;
         padding: 5px 15px;
       }
     }
   }
 }
-

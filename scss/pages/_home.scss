@@ -150,7 +150,6 @@ body {
               }
             }
           }
-
         }
 
         .common-form-check {
@@ -182,7 +181,6 @@ body {
               position: relative;
 
               .skill-img {
-
               }
 
               .skill-name {
@@ -224,7 +222,6 @@ body {
                 }
 
                 .ability-img {
-
                 }
 
                 .ability-space {
@@ -237,12 +234,9 @@ body {
               }
             }
           }
-
-
         }
 
         .common-range-slider {
-
           .slider-info {
             @include flexbox();
             @include justify-content(space-between);
@@ -258,7 +252,8 @@ body {
            * These styles are required for noUiSlider to function.
            * You don't need to change these rules to apply your design.
            */
-          .noUi-target, .noUi-target * {
+          .noUi-target,
+          .noUi-target * {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             -ms-touch-action: none;
@@ -303,8 +298,8 @@ body {
           }
 
           .noUi-state-tap .noUi-origin {
-            -webkit-transition: left 0.3s, top .3s;
-            transition: left 0.3s, top .3s;
+            -webkit-transition: left 0.3s, top 0.3s;
+            transition: left 0.3s, top 0.3s;
           }
 
           .noUi-state-drag * {
@@ -314,7 +309,8 @@ body {
           /* Painting and performance;
            * Browsers can paint handles in their own layer.
            */
-          .noUi-base, .noUi-handle {
+          .noUi-base,
+          .noUi-handle {
             -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
           }
@@ -343,7 +339,7 @@ body {
             cursor: ew-resize;
 
             &:before {
-              content: "";
+              content: '';
               position: absolute;
               top: -4px;
               left: 0;
@@ -355,7 +351,7 @@ body {
             }
 
             &:after {
-              content: "";
+              content: '';
               position: absolute;
               bottom: -4px;
               left: 0;
@@ -415,11 +411,13 @@ body {
 
           /* Disabled state;
            */
-          [disabled].noUi-connect, [disabled] .noUi-connect {
-            background: #B8B8B8;
+          [disabled].noUi-connect,
+          [disabled] .noUi-connect {
+            background: #b8b8b8;
           }
 
-          [disabled].noUi-origin, [disabled] .noUi-handle {
+          [disabled].noUi-origin,
+          [disabled] .noUi-handle {
             cursor: not-allowed;
           }
         }
@@ -477,7 +475,6 @@ body {
           font-weight: bold;
         }
       }
-
     }
 
     .list-card {
@@ -543,7 +540,6 @@ body {
           left: 25px;
 
           .monster-element {
-
           }
 
           .monster-name {
@@ -606,7 +602,7 @@ body {
     border-bottom-left-radius: 0.8rem;
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 40px;
@@ -625,4 +621,3 @@ body {
     font-weight: bold;
   }
 }
-

@@ -17,30 +17,29 @@
           -moz-box-shadow: inset 0px 0px 60px 15px rgb(0 0 0 / 10%);
           box-shadow: inset 0px 0px 60px 15px rgb(0 0 0 / 10%);
         }
-
       }
     }
   }
-  .nav-right{
-    .dropdown{
-      button:focus{
+  .nav-right {
+    .dropdown {
+      button:focus {
         box-shadow: none;
       }
-      .dropdown-menu{
+      .dropdown-menu {
         background-color: #1767bd;
         border: none;
-        li{
-          a{
+        li {
+          a {
             font-size: 1.1rem;
             color: #ffffff;
             font-weight: bold;
-            &:hover{
+            &:hover {
               background-color: #103565;
             }
           }
         }
       }
-      .dropdown-toggle{
+      .dropdown-toggle {
         text-transform: uppercase;
         color: #ffffff;
         font-weight: bold;
@@ -48,4 +47,3 @@
     }
   }
 }
-

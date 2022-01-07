@@ -48,7 +48,7 @@
   .special-button {
     width: fit-content;
     margin: auto;
-    @include media-breakpoint-down(sm){
+    @include media-breakpoint-down(sm) {
       .sp-button {
         margin: 0 0 3rem 0 !important;
       }
@@ -67,21 +67,22 @@
   .detail-info-list {
     user-select: none;
     @media (max-width: 768px) {
-      .m-info{
+      .m-info {
         text-align: center;
       }
-      .m-element{
+      .m-element {
         @include flexbox();
         @include flex-direction(column);
       }
-      .m-class{
+      .m-class {
         @include flexbox();
         @include flex-direction(column);
       }
       .info-img {
         margin: auto !important;
       }
-      .m-ability, .m-skill{
+      .m-ability,
+      .m-skill {
         margin-bottom: 1rem;
       }
     }
@@ -130,16 +131,16 @@
     }
   }
 
-  .item-name{
+  .item-name {
     color: #ffff;
     font-size: 2.5rem;
     text-align: center;
     font-weight: 700;
   }
-  .action-button{
+  .action-button {
     @include flexbox();
     @include justify-content(space-between);
-    .special-button{
+    .special-button {
       margin: 0 0;
     }
   }
@@ -172,7 +173,7 @@
     }
 
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 25px;
@@ -193,12 +194,11 @@
   }
 }
 
-.main-item-detail{
-
-  .detail-info-list{
+.main-item-detail {
+  .detail-info-list {
     margin-top: 1rem;
   }
-  .m-info{
+  .m-info {
     @media (max-width: 1024.98px) {
       margin-bottom: 3.5rem !important;
     }

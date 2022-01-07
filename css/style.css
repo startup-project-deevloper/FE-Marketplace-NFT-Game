@@ -11988,7 +11988,8 @@ body {
 .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .slider-labels {
   margin-top: 10px;
 }
-.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-target, .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-target * {
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-target,
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-target * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -ms-touch-action: none;
@@ -12033,7 +12034,8 @@ body {
 .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-state-drag * {
   cursor: inherit !important;
 }
-.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-base, .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-handle {
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-base,
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider .noUi-handle {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
@@ -12102,10 +12104,12 @@ body {
   left: -7px;
   top: -1px;
 }
-.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled].noUi-connect, .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled] .noUi-connect {
-  background: #B8B8B8;
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled].noUi-connect,
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled] .noUi-connect {
+  background: #b8b8b8;
 }
-.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled].noUi-origin, .main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled] .noUi-handle {
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled].noUi-origin,
+.main-split .main-menu-left .menu-tabs .tab-content .common-range-slider [disabled] .noUi-handle {
   cursor: not-allowed;
 }
 .main-split .main-menu-left:before {
@@ -12494,7 +12498,8 @@ body {
   .main-detail .detail-info-list .info-img {
     margin: auto !important;
   }
-  .main-detail .detail-info-list .m-ability, .main-detail .detail-info-list .m-skill {
+  .main-detail .detail-info-list .m-ability,
+.main-detail .detail-info-list .m-skill {
     margin-bottom: 1rem;
   }
 }
@@ -12653,7 +12658,9 @@ body {
   flex-direction: column;
   text-align: center;
 }
-.main-box .chest-box .circulation, .main-box .chest-box .chest-txt, .main-box .chest-box .bit-usd {
+.main-box .chest-box .circulation,
+.main-box .chest-box .chest-txt,
+.main-box .chest-box .bit-usd {
   background-color: #103565;
   width: fit-content;
   margin: 0 auto 1rem auto;
