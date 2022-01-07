@@ -12,6 +12,7 @@ Header
     .header-logo{
       order: 1;
       align-self: center;
+      margin: 0.5rem 0 1rem 0;
     }
     .nav-left{
       order: 2;
@@ -30,9 +31,13 @@ Header
   padding: 0 1rem 0 1rem;
 
   .nav-left {
+    @include flexbox();
     align-self: center;
     flex-grow: 1;
     flex-basis: 0;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
     .nav-link {
       padding: 2rem 2rem;
       color: #ffffff;
@@ -71,7 +76,23 @@ Header
     }
     .dropdown{
       padding: 1.5rem;
-
+      button:focus{
+        box-shadow: none;
+      }
+      .dropdown-menu{
+        background-color: #1767bd;
+        border: none;
+        li{
+          a{
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: bold;
+            &:hover{
+              background-color: #103565;
+            }
+          }
+        }
+      }
       button{
         color: #ffffff;
         text-transform: uppercase;
@@ -81,3 +102,27 @@ Header
     }
   }
 }
+
+.box-header-mobile{
+  display: none;
+}
+
+@include media-breakpoint-down(md) {
+  .box-header{
+    display: none !important;
+  }
+  .box-header-mobile{
+    @include flexbox();
+    @include justify-content(space-between);
+    padding: 0.5rem;
+    align-items: center;
+    .special-button{
+      margin: 0;
+      .sp-button{
+        margin: 0;
+        padding: 5px 15px;
+      }
+    }
+  }
+}
+

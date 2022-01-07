@@ -1,0 +1,51 @@
+.offcanvas-box {
+  background-color: #103565;
+
+  .nav-left {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+      font-weight: bold;
+
+      a {
+        color: #ffffff;
+        font-size: 1.2rem;
+        &.active {
+          border-radius: 10px;
+          -webkit-box-shadow: inset 0px 0px 60px 15px rgb(0 0 0 / 10%);
+          -moz-box-shadow: inset 0px 0px 60px 15px rgb(0 0 0 / 10%);
+          box-shadow: inset 0px 0px 60px 15px rgb(0 0 0 / 10%);
+        }
+
+      }
+    }
+  }
+  .nav-right{
+    .dropdown{
+      button:focus{
+        box-shadow: none;
+      }
+      .dropdown-menu{
+        background-color: #1767bd;
+        border: none;
+        li{
+          a{
+            font-size: 1.1rem;
+            color: #ffffff;
+            font-weight: bold;
+            &:hover{
+              background-color: #103565;
+            }
+          }
+        }
+      }
+      .dropdown-toggle{
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
