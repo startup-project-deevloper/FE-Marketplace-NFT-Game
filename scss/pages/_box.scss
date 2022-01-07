@@ -14,7 +14,7 @@
       border-radius: 10px;
     }
     .chest-img {
-      animation: wiggle 2s linear infinite;
+      animation: wiggle 3s linear infinite;
       width: fit-content;
       max-width: 100%;
       margin: auto;
@@ -61,23 +61,23 @@
 
 @keyframes wiggle {
   0%,
-  7% {
+  5% {
     transform: rotateZ(0);
   }
-  15% {
-    transform: rotateZ(-15deg);
+  10% {
+    transform: rotateZ(-5deg);
   }
   20% {
-    transform: rotateZ(10deg);
+    transform: rotateZ(2deg);
   }
   25% {
-    transform: rotateZ(-10deg);
+    transform: rotateZ(-2deg);
   }
   30% {
-    transform: rotateZ(6deg);
+    transform: rotateZ(3deg);
   }
   35% {
-    transform: rotateZ(-4deg);
+    transform: rotateZ(0deg);
   }
   40%,
   100% {
