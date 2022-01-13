@@ -1,0 +1,69 @@
+
+#countDown {
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  width: fit-content;
+  margin: 0 auto 1rem auto;
+  background-color: #10356594;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: url(../images/box/countdown-left.png);
+    top: -3px;
+    left: -35px;
+  }
+  &:after {
+    position: absolute;
+    content: url(../images/box/countdown-right.png);
+    top: -3px;
+    right: -35px;
+  }
+}
+
+.count-down-wrapper{
+  padding: 0 0.6rem
+}
+.count-down-wrapper > div {
+  display: inline-block;
+}
+.count-down-wrapper .time {
+  width: 61px;
+}
+.count-down-wrapper .seperated {
+  vertical-align: top;
+  padding-top: 5px;
+}
+.days,.hours,.minutes,.seconds{
+  font-size: 2.3rem;
+  font-weight: 900;
+  background: linear-gradient(0deg, rgba(62,236,254,1) 0%, rgba(194,225,236,1) 60%, rgba(194,225,236,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.count-down-wrapper .time > span {
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.small-text {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+@media (max-width: 375.98px) {
+  .count-down-wrapper{
+    padding: 0 0;
+  }
+  #countDown {
+    &:after {
+      position: absolute;
+      content: url(../images/box/countdown-right.png);
+      top: -3px;
+      right: -32px;
+    }
+  }
+}
