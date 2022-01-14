@@ -131,8 +131,8 @@
     <div class="box-header">
       <ul class="nav-left">
         <li class="active"><a href="box.html" class="nav-link">Etermon box</a></li>
-        <li><a href="#" class="nav-link" data-bs-toggle="popover" data-bs-content="Coming Soon">Marketplace</a></li>
-        <li><a href="#" class="nav-link" data-bs-toggle="popover" data-bs-content="Coming Soon">Vesting</a></li>
+        <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Marketplace</a></li>
+        <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Vesting</a></li>
       </ul>
 
       <a href="/" class="d-flex align-items-center header-logo">
@@ -141,7 +141,7 @@
       </a>
 
       <div class="nav-right">
-        <a href="#" class="staking" data-bs-toggle="popover" data-bs-content="Coming Soon">Staking</a>
+        <a href="#" class="staking" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Staking</a>
         <div class="special-button">
           <button class="sp-button">Connect Wallet</button>
         </div>
@@ -168,39 +168,67 @@
         <div class="col-12 col-sm-12 col-lg-6 col-xl-5">
           <div class="left-inventory">
             <div class="inventory-menu">
-              <div class="inventory-menu-item">
-                <a href="#" class="menu-name active">Box</a>
-              </div>
-              <div class="inventory-menu-item">
-                <a href="#" class="menu-name">Monster</a>
-              </div>
-              <div class="inventory-menu-item">
-                <a href="#" class="menu-name">Item</a>
-              </div>
+              <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                <li class="nav-item inventory-menu-item">
+                  <a type="button" class="nav-link menu-name active" id="pills-box-tab" data-bs-toggle="pill"
+                     data-bs-target="#pills-box" role="tab"
+                     aria-controls="pills-box" aria-selected="true">Box
+                  </a>
+                </li>
+                <li class="nav-item inventory-menu-item">
+                  <a type="button" class="nav-link menu-name" id="pills-monster-tab" data-bs-toggle="pill"
+                     data-bs-target="#pills-monster" role="tab"
+                     aria-controls="pills-monster" aria-selected="false">Monster
+                  </a>
+                </li>
+                <li class="nav-item inventory-menu-item">
+                  <a type="button" class="nav-link menu-name" id="pills-item-tab" data-bs-toggle="pill"
+                     data-bs-target="#pills-item" role="tab"
+                     aria-controls="pills-item" aria-selected="false">Item
+                  </a>
+                </li>
+              </ul>
             </div>
             <div class="inventory-left-body">
-              <div class="inventory-chest-img">
-                <img class="chest-img" src="images/box/chest.png" alt="chest">
-              </div>
-              <div class="button-detail">
-                <button type="button" class="btn btn-detail" data-bs-toggle="popover" data-bs-content="The premise of Mystery Boxes is quite simple and straightforward">Detail</button>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-box" role="tabpanel" aria-labelledby="pills-box-tab">
+                  <div class="inventory-chest-img">
+                    <img class="chest-img" src="images/box/chest.png" alt="chest">
+                  </div>
+                  <div class="button-detail">
+                    <button type="button" class="btn btn-detail" data-bs-toggle="modal" data-bs-target="#detailModal">
+                      Detail
+                    </button>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-monster" role="tabpanel" aria-labelledby="pills-monster-tab">
+                  <div class="not-found">
+                    <span>No Monster available</span>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="pills-item" role="tabpanel" aria-labelledby="pills-item-tab">
+                  <div class="not-found">
+                    <span>No Item available</span>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-sm-12 col-lg-6 col-xl-7">
-          <div class="right-inventory">
-
           </div>
         </div>
       </div>
 
+      <div class="col-12 col-sm-12 col-lg-6 col-xl-7">
+        <div class="right-inventory">
 
+        </div>
+      </div>
     </div>
-  </main>
-  <footer class="footer" id="footer">
-  </footer>
+
+
+</div>
+</main>
+<footer class="footer" id="footer">
+</footer>
 </div>
 
 <div class="offcanvas offcanvas-box offcanvas-start" tabindex="-1" id="offcanvasExample"
@@ -215,9 +243,9 @@
   <div class="offcanvas-body">
     <ul class="nav-left">
       <li><a href="box.html" class="nav-link active">Etermon box</a></li>
-      <li><a href="#" class="nav-link" data-bs-toggle="popover" data-bs-content="Coming Soon">Marketplace</a></li>
-      <li><a href="#" class="nav-link" data-bs-toggle="popover" data-bs-content="Coming Soon">Vesting</a></li>
-      <li><a href="#" class="nav-link staking" data-bs-toggle="popover" data-bs-content="Coming Soon">Staking</a></li>
+      <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Marketplace</a></li>
+      <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Vesting</a></li>
+      <li><a href="#" class="nav-link staking" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Staking</a></li>
     </ul>
     <div class="nav-right">
       <div class="special-button">
@@ -233,6 +261,30 @@
           <li><a class="dropdown-item" href="#">VI</a></li>
           <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal" tabindex="-1" aria-labelledby="comingSoonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span>
+        Coming Soon...
+          </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span>
+        The premise of Mystery Boxes is quite simple and straightforward
+          </span>
       </div>
     </div>
   </div>

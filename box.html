@@ -130,8 +130,8 @@
   <div class="box-header">
     <ul class="nav-left">
       <li class="active"><a href="box.html" class="nav-link">Etermon box</a></li>
-      <li><a href="#" class="nav-link" data-bs-toggle="popover" data-bs-content="Coming Soon">Marketplace</a></li>
-      <li><a href="#" class="nav-link" data-bs-toggle="popover" data-bs-content="Coming Soon">Vesting</a></li>
+      <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Marketplace</a></li>
+      <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Vesting</a></li>
     </ul>
 
     <a href="/" class="d-flex align-items-center header-logo">
@@ -140,7 +140,7 @@
     </a>
 
     <div class="nav-right">
-      <a href="#" class="staking" data-bs-toggle="popover" data-bs-content="Coming Soon">Staking</a>
+      <a href="#" class="staking" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Staking</a>
       <div class="special-button">
         <button class="sp-button">Connect Wallet</button>
       </div>
@@ -195,9 +195,9 @@
   <div class="offcanvas-body">
     <ul class="nav-left">
       <li><a href="box.html" class="nav-link active">Etermon box</a></li>
-      <li><a href="#" class="nav-link" data-bs-toggle="popover" data-bs-content="Coming Soon">Marketplace</a></li>
-      <li><a href="#" class="nav-link" data-bs-toggle="popover" data-bs-content="Coming Soon">Vesting</a></li>
-      <li><a href="#" class="nav-link staking" data-bs-toggle="popover" data-bs-content="Coming Soon">Staking</a></li>
+      <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Marketplace</a></li>
+      <li><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Vesting</a></li>
+      <li><a href="#" class="nav-link staking" data-bs-toggle="modal" data-bs-target="#comingSoonModal">Staking</a></li>
     </ul>
     <div class="nav-right">
       <div class="special-button">
@@ -213,6 +213,18 @@
           <li><a class="dropdown-item" href="#">VI</a></li>
           <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="comingSoonModal" tabindex="-1" aria-labelledby="comingSoonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span>
+        Coming Soon...
+          </span>
       </div>
     </div>
   </div>

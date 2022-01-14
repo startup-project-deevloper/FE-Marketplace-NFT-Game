@@ -1,17 +1,16 @@
 .main-inventory {
-  .inventory-body{
+  .inventory-body {
     margin-top: 2rem;
   }
+
   .left-inventory {
+
+    @include media-breakpoint-up(xl) {
+      margin-left: 2rem;
+    }
+
     .inventory-menu {
-      @include flexbox();
-      @include justify-content(space-evenly);
-      @include media-breakpoint-up(xl) {
-        margin-left: 2rem;
-      }
-      @include media-breakpoint-down(sm){
-        @include flex-direction(column);
-      }
+
       background-color: #1245849e;
       border-radius: 5px;
 
@@ -31,30 +30,40 @@
             &:before {
               position: absolute;
               bottom: -5px;
-              left: -5px;
               content: "";
               height: 0;
-              width: 100px;
+              left: 0;
+              width: 100%;
               border-bottom: 10px solid #02cce8;
               border-left: 10px solid transparent;
               border-right: 10px solid transparent;
+              @include media-breakpoint-down(sm) {
+                left: -5px;
+                bottom: 12px;
+                width: 100%;
+                border-top: 8px solid transparent;
+                border-left: 15px solid #02cce8;
+                border-bottom: 8px solid transparent;
+              }
             }
           }
         }
       }
     }
-    .inventory-left-body{
-      & > div{
+
+    .inventory-left-body {
+      .inventory-chest-img {
         margin: 0 auto 2rem auto;
-      }
-      .inventory-chest-img{
-        .chest-img{
+
+        .chest-img {
           width: 100%;
         }
       }
-      .button-detail{
+
+      .button-detail {
         text-align: center;
-        .btn-detail{
+
+        .btn-detail {
           color: #ffffff;
           font-size: 1.6rem;
           font-weight: bold;
@@ -64,7 +73,8 @@
           border-radius: 10px;
           padding: 0.2rem 1.5rem;
           position: relative;
-          &:before{
+
+          &:before {
             position: absolute;
             right: -30px;
             top: -1px;
@@ -72,6 +82,19 @@
           }
         }
       }
+
+      .not-found {
+        text-align: center;
+        margin: 2rem 0;
+
+        span {
+          font-size: 2rem;
+          color: #ffffff;
+          font-weight: bold;
+        }
+      }
     }
+
+
   }
 }
