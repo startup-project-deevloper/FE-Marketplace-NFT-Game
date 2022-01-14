@@ -16,6 +16,7 @@
     top: -3px;
     left: -35px;
   }
+
   &:after {
     position: absolute;
     content: url(../images/box/countdown-right.png);
@@ -24,38 +25,44 @@
   }
 }
 
-.count-down-wrapper{
-  padding: 0 0.6rem
+.count-down-wrapper {
+  padding: 0 0.6rem;
+
+  .days, .hours, .minutes, .seconds {
+    font-size: 2.3rem;
+    font-weight: 900;
+    background: linear-gradient(0deg, rgba(62, 236, 254, 1) 0%, rgba(194, 225, 236, 1) 60%, rgba(194, 225, 236, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .small-text {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
 }
+
 .count-down-wrapper > div {
   display: inline-block;
 }
+
 .count-down-wrapper .time {
   width: 61px;
 }
+
 .count-down-wrapper .seperated {
   vertical-align: top;
   padding-top: 5px;
 }
-.days,.hours,.minutes,.seconds{
-  font-size: 2.3rem;
-  font-weight: 900;
-  background: linear-gradient(0deg, rgba(62,236,254,1) 0%, rgba(194,225,236,1) 60%, rgba(194,225,236,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+
 
 .count-down-wrapper .time > span {
-  border-radius: 3px;
   display: inline-block;
 }
 
-.small-text {
-  font-size: 16px;
-  text-transform: uppercase;
-}
+
 @media (max-width: 375.98px) {
-  .count-down-wrapper{
+  .count-down-wrapper {
     padding: 0 0;
   }
   #countDown {
@@ -67,3 +74,43 @@
     }
   }
 }
+
+#countDownLaunch {
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+  width: fit-content;
+  margin: 1.5rem auto 5rem auto;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    position: absolute;
+    content: url(../images/box/countdown-frame.png);
+    top: -25px;
+    right: -65px;
+    z-index: -1;
+  }
+
+  .count-down-launch {
+    text-shadow:  #fafcd0 0 0 4px;
+    div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .time {
+      width: 50px;
+    }
+
+    .days, .hours, .minutes, .seconds {
+      font-size: 2.3rem;
+      font-weight: 900;
+      background: linear-gradient(0deg, rgba(247,251,180,1) 0%, rgba(253,254,235,1) 65%, rgba(253,254,235,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
