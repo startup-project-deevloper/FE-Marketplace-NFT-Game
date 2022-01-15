@@ -11698,7 +11698,7 @@ Header
   flex-basis: 0;
   align-items: center;
 }
-.box-header .nav-right .staking {
+.box-header .nav-right .nav-right-item {
   color: #ffffff;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -12725,6 +12725,9 @@ body {
   margin: 0 auto 1rem auto;
   padding: 0.2rem 1rem;
   border-radius: 10px;
+}
+.main-box .chest-box .box-des {
+  text-align: left;
 }
 .main-box .chest-box .chest-img {
   animation: wiggle 3s linear infinite;
