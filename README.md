@@ -12,17 +12,20 @@
 - Official Launch: box.html (Release at 10AM UTC+7, 24th, Jan, 2022)
 - User Inventory: inventory.html (Check the boxes that the user has purchased)
 
-### Vesting Pages HTML
+### Vesting Pages HTML (Not Done)
 
 - update soon
 
-### Staking Pages HTML
+### Staking Pages HTML (Not Done)
 
 - update soon
 
-### Marketplace Pages HTML
+### Marketplace Pages HTML (Not Done)
 
-- update soon
+- marketplace.html
+- item-detail.html
+- item-page.html
+- monster-detail.html
 
 ## Usage
 
