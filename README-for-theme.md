@@ -1,30 +1,31 @@
-## Etermon Dapps HTML Front End
+# [Frontend Seed 5](https://github.com/trungnghia112/frontend-seed-5)
 
-- Box Sale : Release at 10AM UTC+7, 24th, Jan, 2022
-- Vesting : Release on Feb, 2022
-- Stacking : Release on Feb, 2022
-- Marketplace: Release on 20th,Feb, 2022
-- index.html: currently redirected to box sale coming soon page
+This template features predefined file paths for Bootstrap 4 and jQuery, so you can quickly create Bootstrap websites.
 
-### Box Sale Pages HTML (Done)
+## Status
 
-- Coming Soon: box-coming.html (Release on 20th, Jan, 2022 )
-- Official Launch: box.html (Release at 10AM UTC+7, 24th, Jan, 2022)
-- User Inventory: inventory.html (Check the boxes that the user has purchased)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/trungnghia112/frontend-seed-5/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-bare.svg)](https://www.npmjs.com/package/frontend-seed-5)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-bare/status.svg)](https://david-dm.org/trungnghia112/frontend-seed-5)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-bare/dev-status.svg)](https://david-dm.org/trungnghia112/frontend-seed-5?type=dev)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-### Vesting Pages HTML
+## Download and Installation
 
-- update soon
+To begin using this template, choose one of the following options to get started:
 
-### Staking Pages HTML
-
-- update soon
-
-### Marketplace Pages HTML
-
-- update soon
+- [Download the latest release](https://github.com/trungnghia112/frontend-seed-5/releases)
+- Install via npm: `npm i frontend-seed-5`
+- Clone the repo: `git clone https://github.com/trungnghia112/frontend-seed-5.git`
+- [Fork, Clone, or Download on GitHub](https://github.com/trungnghia112/frontend-seed-5)
 
 ## Usage
+
+### Basic Usage
+
+You can open the `index.html` file in your web browser.
+
+### Advanced Usage
 
 Run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved.
 
@@ -37,11 +38,13 @@ Prettier can be run [in your editor](http://prettier.io/docs/en/editors.html) on
 
 Run `npm run build` which will compile Sass, JS, optimized all our assets, and copied the necessary files into the `dist` folder.
 
-### Bugs and Issues
+## Bugs and Issues
 
 Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/frontend-seed-5/issues) here on GitHub.
 
-### Features
+## Features
+
+- Simple, intuitive, clean code.
 
 - **Bootstrap ^5.1.0**
 
@@ -52,3 +55,11 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 - **Font Awesome 5.12.1**
 
 - **Prettier ^2.0.5** (Opinionated Code Formatter).
+
+## Buy me a beer
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/trungnghia112)
+
+## License
+
+MIT
