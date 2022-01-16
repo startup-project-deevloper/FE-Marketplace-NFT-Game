@@ -1,750 +1,1205 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Marketplace</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-  <link rel="manifest" href="images/favicons/site.webmanifest">
-  <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="images/favicons/favicon.ico">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="images/favicons/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="noindex, nofollow" />
 
-  <link rel="canonical" href="http://">
-  <meta name="title" content="Marketplace">
-  <meta name="referrer" content="unsafe-url">
-  <meta name="description" content="Marketplace - Etermon market">
+    <title>Marketplace</title>
 
-  <meta property="fb:app_id" content="your_app_id">
-  <meta property="og:locale" content="en_US"/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:title" content="">
-  <meta property="og:description" content="">
-  <meta property="og:url" content="">
-  <meta property="og:site_name" content="">
-  <meta property="article:publisher" content="">
-  <meta property="article:section" content="Article">
-  <meta property="article:published_time" content="">
-  <meta property="article:modified_time" content="">
-  <meta property="og:updated_time" content="">
-  <meta property="og:image" content="">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="images/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="images/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:title" content="">
-  <meta name="twitter:site" content="">
-  <meta name="twitter:image" content="">
-  <meta name="twitter:creator" content="">
-  <!-- App CSS -->
-  <style>
-    :root {
-      --theme-color: #007bff;
-      --bg-color: #ffffff;
-    }
+    <link rel="canonical" href="http://" />
+    <meta name="title" content="Marketplace" />
+    <meta name="referrer" content="unsafe-url" />
+    <meta name="description" content="Marketplace - Etermon market" />
 
-    html {
-      box-sizing: border-box;
-    }
+    <meta property="fb:app_id" content="your_app_id" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="article:publisher" content="" />
+    <meta property="article:section" content="Article" />
+    <meta property="article:published_time" content="" />
+    <meta property="article:modified_time" content="" />
+    <meta property="og:updated_time" content="" />
+    <meta property="og:image" content="" />
 
-    *,
-    *::before,
-    *::after {
-      box-sizing: inherit;
-    }
-
-    .app-loading {
-      background: var(--bg-color);
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    @keyframes bouncing-loader {
-      to {
-        opacity: 0.1;
-        transform: translate3d(0, -1rem, 0);
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:creator" content="" />
+    <!-- App CSS -->
+    <style>
+      :root {
+        --theme-color: #007bff;
+        --bg-color: #ffffff;
       }
-    }
 
-    .app-loading .bouncing-loader {
-      display: flex;
-      justify-content: center;
-    }
+      html {
+        box-sizing: border-box;
+      }
 
-    .app-loading .bouncing-loader > div {
-      width: 1rem;
-      height: 1rem;
-      margin: 3rem 0.2rem;
-      background: var(--theme-color);
-      border-radius: 50%;
-      animation: bouncing-loader 0.6s infinite alternate;
-    }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
 
-    .app-loading .bouncing-loader > div:nth-child(2) {
-      animation-delay: 0.2s;
-    }
+      .app-loading {
+        background: var(--bg-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-    .app-loading .bouncing-loader > div:nth-child(3) {
-      animation-delay: 0.4s;
-    }
-  </style>
-  <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
+      @keyframes bouncing-loader {
+        to {
+          opacity: 0.1;
+          transform: translate3d(0, -1rem, 0);
+        }
+      }
+
+      .app-loading .bouncing-loader {
+        display: flex;
+        justify-content: center;
+      }
+
+      .app-loading .bouncing-loader > div {
+        width: 1rem;
+        height: 1rem;
+        margin: 3rem 0.2rem;
+        background: var(--theme-color);
+        border-radius: 50%;
+        animation: bouncing-loader 0.6s infinite alternate;
+      }
+
+      .app-loading .bouncing-loader > div:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .app-loading .bouncing-loader > div:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+    </style>
+    <!--<link rel='preload' href='dist/app.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="dist/app.min.css">
   </noscript>-->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="customs/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="customs/style.css" />
+  </head>
 
-<body>
-<div class="app-loading">
-  <div class="bouncing-loader">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-</div>
-<div class="wrapper bg" id="site_wrapper">
-  <header class="header" id="header">
-    <nav class="navbar navbar-light bg-transparent">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/LOGO.png" alt=""
-               class="d-inline-block align-text-top">
-          <span>MARKETPLACE</span>
-        </a>
-        <div class="special-button">
-          <button class="sp-button">Connect Wallet</button>
-        </div>
-      </div>
-    </nav>
-
-  </header>
-  <main class="main" id="main">
-    <div class="main-nav">
-      <div class="white-space"></div>
-      <div class="nav-custom">
-        <div class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Monster</a>
-          <div class="nav-link-bottom">&nbsp;</div>
-        </div>
-        <div class="nav-item">
-          <a class="nav-link" aria-current="page" href="item-page.html">Items</a>
-        </div>
-        <div class="nav-item">
-          <a class="nav-link" aria-current="page" href="box.html">Box Etermon</a>
-        </div>
+  <body>
+    <div class="app-loading">
+      <div class="bouncing-loader">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
-    <div class="main-split container-fluid">
-      <div class="main-menu-left">
-        <div class="menu-clear">
-          <span>Filter</span>
-          <button class="clear-filter" id="clearFilter">Clear all</button>
-        </div>
-        <div class="menu-tabs">
-          <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#general"
-                      type="button" role="tab" aria-controls="general" aria-selected="true">General
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="skill-tab" data-bs-toggle="pill" data-bs-target="#skill" type="button"
-                      role="tab" aria-controls="skill" aria-selected="false">Skill
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="ability-tab" data-bs-toggle="pill" data-bs-target="#ability" type="button"
-                      role="tab" aria-controls="ability" aria-selected="false">Ability
-              </button>
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
-              <div class="general-body">
-                <div class="general-item general-element">
-                  <h5 class="menu-header">Element</h5>
-                  <div class="common-form-check">
-                    <div class="form-check">
-                      <label class="form-check-label" for="elementCheckbox1">
-                        <img src="images/element/elect.png" alt="element 1">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="elementCheckbox1" value="option1" checked>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="elementCheckbox2">
-                        <img src="images/element/fire.png" alt="element 2">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="elementCheckbox2" value="option2" checked>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="elementCheckbox3">
-                        <img src="images/element/water.png" alt="element 3">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="elementCheckbox3" value="option3" checked>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="elementCheckbox4">
-                        <img src="images/element/plant.png" alt="element 4">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="elementCheckbox4" value="option4">
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="elementCheckbox5">
-                        <img src="images/element/earth.png" alt="element 5">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="elementCheckbox5" value="option5">
-                    </div>
-                  </div>
-                </div>
-                <div class="general-item general-class">
-                  <h5 class="menu-header">Class</h5>
-                  <div class="common-form-check">
-                    <div class="form-check">
-                      <label class="form-check-label" for="classCheckbox1">
-                        <img src="images/class/class1.png" alt="class 1">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="classCheckbox1" value="option1" checked>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="classCheckbox2">
-                        <img src="images/class/class2.png" alt="class 2">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="classCheckbox2" value="option2" checked>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="classCheckbox3">
-                        <img src="images/class/class3.png" alt="class 3">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="classCheckbox3" value="option3" checked>
-                    </div>
-                  </div>
-                </div>
-                <div class="general-item general-rarity">
-                  <h5 class="menu-header">Rarity</h5>
-                  <div class="common-form-check">
-                    <div class="form-check">
-                      <label class="form-check-label" for="rarityCheckbox1">
-                        <img src="images/rarity/rarity1.png" alt="rarity 1">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="rarityCheckbox1" value="option1" checked>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="rarityCheckbox2">
-                        <img src="images/rarity/rarity2.png" alt="rarity 2">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="rarityCheckbox2" value="option2" checked>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="rarityCheckbox3">
-                        <img src="images/rarity/rarity3.png" alt="rarity 3">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="rarityCheckbox3" value="option3" checked>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label" for="rarityCheckbox4">
-                        <img src="images/rarity/rarity4.png" alt="rarity 4">
-                      </label>
-                      <input class="form-check-input" type="checkbox" id="rarityCheckbox4" value="option4" checked>
-                    </div>
-                  </div>
-                </div>
-                <div class="general-item general-breed-count">
-                  <h5 class="menu-header">Breed Count</h5>
-                  <div class="common-range-slider">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div id="breed-range"></div>
-                      </div>
-                    </div>
-                    <div class="slider-info slider-labels">
-                      <div class="caption">
-                        <span id="breed-range-value1"></span>
-                      </div>
-                      <div class="text-right caption">
-                        <span id="breed-range-value2"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <div class="wrapper bg" id="site_wrapper">
+      <header class="header" id="header">
+        <nav class="navbar navbar-light bg-transparent">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="images/LOGO.png"
+                alt=""
+                class="d-inline-block align-text-top"
+              />
+              <span>MARKETPLACE</span>
+            </a>
+            <div class="special-button">
+              <button class="sp-button">Connect Wallet</button>
             </div>
-            <div class="tab-pane fade" id="skill" role="tabpanel" aria-labelledby="skill-tab">
-              <div class="skill-body">
-                <div class="skill-search-box">
-                  <div class="form-group has-search">
-                    <i class="fas fa-search form-control-feedback"></i>
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="skill-list">
-                  <div class="skill-item active">
-                    <img class="skill-img" alt="skill 1" src="images/skill/skill1.png">
-                    <span class="skill-name">Blazing fireball</span>
-                  </div>
-                  <div class="skill-item">
-                    <img class="skill-img" alt="skill 2" src="images/skill/skill2.png">
-                    <span class="skill-name">Martian stones</span>
-                  </div>
-                  <div class="skill-item">
-                    <img class="skill-img" alt="skill 3" src="images/skill/skill3.png">
-                    <span class="skill-name">Inferno</span>
-                  </div>
-                  <div class="skill-item">
-                    <img class="skill-img" alt="skill 4" src="images/skill/skill4.png">
-                    <span class="skill-name">Water strike</span>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </nav>
+      </header>
+      <main class="main" id="main">
+        <div class="main-nav">
+          <div class="white-space"></div>
+          <div class="nav-custom">
+            <div class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Monster</a
+              >
+              <div class="nav-link-bottom">&nbsp;</div>
             </div>
-            <div class="tab-pane fade" id="ability" role="tabpanel" aria-labelledby="ability-tab">
-              <div class="ability-body">
-                <div class="ability-list">
-                  <div class="ability-item">
-                    <div class="ability-icon">
-                      <div class="ability-space"></div>
-                      <div class="ability-img-box">
-                        <img class="ability-img" src="images/ability/ability1.png" alt="ability 1">
-                      </div>
-                      <div class="ability-space"></div>
-                    </div>
-                    <div class="common-range-slider">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div id="attack-range"></div>
-                        </div>
-                      </div>
-                      <div class="slider-info slider-labels">
-                        <div class="caption">
-                          <span id="attack-range-value1"></span>
-                        </div>
-                        <div class="text-right caption">
-                          <span id="attack-range-value2"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ability-item">
-                    <div class="ability-icon">
-                      <div class="ability-space"></div>
-                      <div class="ability-img-box">
-                        <img class="ability-img" src="images/ability/ability2.png" alt="ability 2">
-                      </div>
-                      <div class="ability-space"></div>
-                    </div>
-                    <div class="common-range-slider">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div id="defense-range"></div>
-                        </div>
-                      </div>
-                      <div class="slider-info slider-labels">
-                        <div class="caption">
-                          <span id="defense-range-value1"></span>
-                        </div>
-                        <div class="text-right caption">
-                          <span id="defense-range-value2"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ability-item">
-                    <div class="ability-icon">
-                      <div class="ability-space"></div>
-                      <div class="ability-img-box">
-                        <img class="ability-img" src="images/ability/ability3.png" alt="ability 3">
-                      </div>
-                      <div class="ability-space"></div>
-                    </div>
-                    <div class="common-range-slider">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div id="crit-range"></div>
-                        </div>
-                      </div>
-                      <div class="slider-info slider-labels">
-                        <div class="caption">
-                          <span id="crit-range-value1"></span>
-                        </div>
-                        <div class="text-right caption">
-                          <span id="crit-range-value2"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ability-item">
-                    <div class="ability-icon">
-                      <div class="ability-space"></div>
-                      <div class="ability-img-box">
-                        <img class="ability-img" src="images/ability/ability4.png" alt="ability 4">
-                      </div>
-                      <div class="ability-space"></div>
-                    </div>
-                    <div class="common-range-slider">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div id="armour-range"></div>
-                        </div>
-                      </div>
-                      <div class="slider-info slider-labels">
-                        <div class="caption">
-                          <span id="armour-range-value1"></span>
-                        </div>
-                        <div class="text-right caption">
-                          <span id="armour-range-value2"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ability-item">
-                    <div class="ability-icon">
-                      <div class="ability-space"></div>
-                      <div class="ability-img-box">
-                        <img class="ability-img" src="images/ability/ability5.png" alt="ability 5">
-                      </div>
-                      <div class="ability-space"></div>
-                    </div>
-                    <div class="common-range-slider">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div id="heart-range"></div>
-                        </div>
-                      </div>
-                      <div class="slider-info slider-labels">
-                        <div class="caption">
-                          <span id="heart-range-value1"></span>
-                        </div>
-                        <div class="text-right caption">
-                          <span id="heart-range-value2"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ability-item">
-                    <div class="ability-icon">
-                      <div class="ability-space"></div>
-                      <div class="ability-img-box">
-                        <img class="ability-img" src="images/ability/ability6.png" alt="ability 6">
-                      </div>
-                      <div class="ability-space"></div>
-                    </div>
-                    <div class="common-range-slider">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div id="speed-range"></div>
-                        </div>
-                      </div>
-                      <div class="slider-info slider-labels">
-                        <div class="caption">
-                          <span id="speed-range-value1"></span>
-                        </div>
-                        <div class="text-right caption">
-                          <span id="speed-range-value2"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ability-item">
-                    <div class="ability-icon">
-                      <div class="ability-space"></div>
-                      <div class="ability-img-box">
-                        <img class="ability-img" src="images/ability/ability7.png" alt="ability 7">
-                      </div>
-                      <div class="ability-space"></div>
-                    </div>
-                    <div class="common-range-slider">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div id="luck-range"></div>
-                        </div>
-                      </div>
-                      <div class="slider-info slider-labels">
-                        <div class="caption">
-                          <span id="luck-range-value1"></span>
-                        </div>
-                        <div class="text-right caption">
-                          <span id="luck-range-value2"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ability-item">
-                    <div class="ability-icon">
-                      <div class="ability-space"></div>
-                      <div class="ability-img-box">
-                        <img class="ability-img" src="images/ability/ability8.png" alt="ability 8">
-                      </div>
-                      <div class="ability-space"></div>
-                    </div>
-                    <div class="common-range-slider">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div id="book-range"></div>
-                        </div>
-                      </div>
-                      <div class="slider-info slider-labels">
-                        <div class="caption">
-                          <span id="book-range-value1"></span>
-                        </div>
-                        <div class="text-right caption">
-                          <span id="book-range-value2"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="nav-item">
+              <a class="nav-link" aria-current="page" href="item-page.html"
+                >Items</a
+              >
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" aria-current="page" href="box.html"
+                >Box Etermon</a
+              >
             </div>
           </div>
         </div>
-      </div>
-      <div class="main-list-right">
-        <div class="list-sort">
-          <div class="sort-box">
-            <div class="btn-group">
-              <button type="button" class="btn btn-txt" data-bs-toggle="dropdown" aria-expanded="false">Action</button>
-              <button type="button" class="btn btn-drop dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                <span class="visually-hidden">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                <li><a class="dropdown-item" href="#">Separated link</a></li>
+        <div class="main-split container-fluid">
+          <div class="main-menu-left">
+            <div class="menu-clear">
+              <span>Filter</span>
+              <button class="clear-filter" id="clearFilter">Clear all</button>
+            </div>
+            <div class="menu-tabs">
+              <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="general-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#general"
+                    type="button"
+                    role="tab"
+                    aria-controls="general"
+                    aria-selected="true"
+                  >
+                    General
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="skill-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#skill"
+                    type="button"
+                    role="tab"
+                    aria-controls="skill"
+                    aria-selected="false"
+                  >
+                    Skill
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="ability-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#ability"
+                    type="button"
+                    role="tab"
+                    aria-controls="ability"
+                    aria-selected="false"
+                  >
+                    Ability
+                  </button>
+                </li>
               </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="general"
+                  role="tabpanel"
+                  aria-labelledby="general-tab"
+                >
+                  <div class="general-body">
+                    <div class="general-item general-element">
+                      <h5 class="menu-header">Element</h5>
+                      <div class="common-form-check">
+                        <div class="form-check">
+                          <label
+                            class="form-check-label"
+                            for="elementCheckbox1"
+                          >
+                            <img
+                              src="images/element/elect.png"
+                              alt="element 1"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="elementCheckbox1"
+                            value="option1"
+                            checked
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label
+                            class="form-check-label"
+                            for="elementCheckbox2"
+                          >
+                            <img
+                              src="images/element/fire.png"
+                              alt="element 2"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="elementCheckbox2"
+                            value="option2"
+                            checked
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label
+                            class="form-check-label"
+                            for="elementCheckbox3"
+                          >
+                            <img
+                              src="images/element/water.png"
+                              alt="element 3"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="elementCheckbox3"
+                            value="option3"
+                            checked
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label
+                            class="form-check-label"
+                            for="elementCheckbox4"
+                          >
+                            <img
+                              src="images/element/plant.png"
+                              alt="element 4"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="elementCheckbox4"
+                            value="option4"
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label
+                            class="form-check-label"
+                            for="elementCheckbox5"
+                          >
+                            <img
+                              src="images/element/earth.png"
+                              alt="element 5"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="elementCheckbox5"
+                            value="option5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="general-item general-class">
+                      <h5 class="menu-header">Class</h5>
+                      <div class="common-form-check">
+                        <div class="form-check">
+                          <label class="form-check-label" for="classCheckbox1">
+                            <img src="images/class/class1.png" alt="class 1" />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="classCheckbox1"
+                            value="option1"
+                            checked
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="classCheckbox2">
+                            <img src="images/class/class2.png" alt="class 2" />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="classCheckbox2"
+                            value="option2"
+                            checked
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="classCheckbox3">
+                            <img src="images/class/class3.png" alt="class 3" />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="classCheckbox3"
+                            value="option3"
+                            checked
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="general-item general-rarity">
+                      <h5 class="menu-header">Rarity</h5>
+                      <div class="common-form-check">
+                        <div class="form-check">
+                          <label class="form-check-label" for="rarityCheckbox1">
+                            <img
+                              src="images/rarity/rarity1.png"
+                              alt="rarity 1"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="rarityCheckbox1"
+                            value="option1"
+                            checked
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="rarityCheckbox2">
+                            <img
+                              src="images/rarity/rarity2.png"
+                              alt="rarity 2"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="rarityCheckbox2"
+                            value="option2"
+                            checked
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="rarityCheckbox3">
+                            <img
+                              src="images/rarity/rarity3.png"
+                              alt="rarity 3"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="rarityCheckbox3"
+                            value="option3"
+                            checked
+                          />
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="rarityCheckbox4">
+                            <img
+                              src="images/rarity/rarity4.png"
+                              alt="rarity 4"
+                            />
+                          </label>
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="rarityCheckbox4"
+                            value="option4"
+                            checked
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="general-item general-breed-count">
+                      <h5 class="menu-header">Breed Count</h5>
+                      <div class="common-range-slider">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <div id="breed-range"></div>
+                          </div>
+                        </div>
+                        <div class="slider-info slider-labels">
+                          <div class="caption">
+                            <span id="breed-range-value1"></span>
+                          </div>
+                          <div class="text-right caption">
+                            <span id="breed-range-value2"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="skill"
+                  role="tabpanel"
+                  aria-labelledby="skill-tab"
+                >
+                  <div class="skill-body">
+                    <div class="skill-search-box">
+                      <div class="form-group has-search">
+                        <i class="fas fa-search form-control-feedback"></i>
+                        <input type="text" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="skill-list">
+                      <div class="skill-item active">
+                        <img
+                          class="skill-img"
+                          alt="skill 1"
+                          src="images/skill/skill1.png"
+                        />
+                        <span class="skill-name">Blazing fireball</span>
+                      </div>
+                      <div class="skill-item">
+                        <img
+                          class="skill-img"
+                          alt="skill 2"
+                          src="images/skill/skill2.png"
+                        />
+                        <span class="skill-name">Martian stones</span>
+                      </div>
+                      <div class="skill-item">
+                        <img
+                          class="skill-img"
+                          alt="skill 3"
+                          src="images/skill/skill3.png"
+                        />
+                        <span class="skill-name">Inferno</span>
+                      </div>
+                      <div class="skill-item">
+                        <img
+                          class="skill-img"
+                          alt="skill 4"
+                          src="images/skill/skill4.png"
+                        />
+                        <span class="skill-name">Water strike</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="ability"
+                  role="tabpanel"
+                  aria-labelledby="ability-tab"
+                >
+                  <div class="ability-body">
+                    <div class="ability-list">
+                      <div class="ability-item">
+                        <div class="ability-icon">
+                          <div class="ability-space"></div>
+                          <div class="ability-img-box">
+                            <img
+                              class="ability-img"
+                              src="images/ability/ability1.png"
+                              alt="ability 1"
+                            />
+                          </div>
+                          <div class="ability-space"></div>
+                        </div>
+                        <div class="common-range-slider">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div id="attack-range"></div>
+                            </div>
+                          </div>
+                          <div class="slider-info slider-labels">
+                            <div class="caption">
+                              <span id="attack-range-value1"></span>
+                            </div>
+                            <div class="text-right caption">
+                              <span id="attack-range-value2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ability-item">
+                        <div class="ability-icon">
+                          <div class="ability-space"></div>
+                          <div class="ability-img-box">
+                            <img
+                              class="ability-img"
+                              src="images/ability/ability2.png"
+                              alt="ability 2"
+                            />
+                          </div>
+                          <div class="ability-space"></div>
+                        </div>
+                        <div class="common-range-slider">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div id="defense-range"></div>
+                            </div>
+                          </div>
+                          <div class="slider-info slider-labels">
+                            <div class="caption">
+                              <span id="defense-range-value1"></span>
+                            </div>
+                            <div class="text-right caption">
+                              <span id="defense-range-value2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ability-item">
+                        <div class="ability-icon">
+                          <div class="ability-space"></div>
+                          <div class="ability-img-box">
+                            <img
+                              class="ability-img"
+                              src="images/ability/ability3.png"
+                              alt="ability 3"
+                            />
+                          </div>
+                          <div class="ability-space"></div>
+                        </div>
+                        <div class="common-range-slider">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div id="crit-range"></div>
+                            </div>
+                          </div>
+                          <div class="slider-info slider-labels">
+                            <div class="caption">
+                              <span id="crit-range-value1"></span>
+                            </div>
+                            <div class="text-right caption">
+                              <span id="crit-range-value2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ability-item">
+                        <div class="ability-icon">
+                          <div class="ability-space"></div>
+                          <div class="ability-img-box">
+                            <img
+                              class="ability-img"
+                              src="images/ability/ability4.png"
+                              alt="ability 4"
+                            />
+                          </div>
+                          <div class="ability-space"></div>
+                        </div>
+                        <div class="common-range-slider">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div id="armour-range"></div>
+                            </div>
+                          </div>
+                          <div class="slider-info slider-labels">
+                            <div class="caption">
+                              <span id="armour-range-value1"></span>
+                            </div>
+                            <div class="text-right caption">
+                              <span id="armour-range-value2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ability-item">
+                        <div class="ability-icon">
+                          <div class="ability-space"></div>
+                          <div class="ability-img-box">
+                            <img
+                              class="ability-img"
+                              src="images/ability/ability5.png"
+                              alt="ability 5"
+                            />
+                          </div>
+                          <div class="ability-space"></div>
+                        </div>
+                        <div class="common-range-slider">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div id="heart-range"></div>
+                            </div>
+                          </div>
+                          <div class="slider-info slider-labels">
+                            <div class="caption">
+                              <span id="heart-range-value1"></span>
+                            </div>
+                            <div class="text-right caption">
+                              <span id="heart-range-value2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ability-item">
+                        <div class="ability-icon">
+                          <div class="ability-space"></div>
+                          <div class="ability-img-box">
+                            <img
+                              class="ability-img"
+                              src="images/ability/ability6.png"
+                              alt="ability 6"
+                            />
+                          </div>
+                          <div class="ability-space"></div>
+                        </div>
+                        <div class="common-range-slider">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div id="speed-range"></div>
+                            </div>
+                          </div>
+                          <div class="slider-info slider-labels">
+                            <div class="caption">
+                              <span id="speed-range-value1"></span>
+                            </div>
+                            <div class="text-right caption">
+                              <span id="speed-range-value2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ability-item">
+                        <div class="ability-icon">
+                          <div class="ability-space"></div>
+                          <div class="ability-img-box">
+                            <img
+                              class="ability-img"
+                              src="images/ability/ability7.png"
+                              alt="ability 7"
+                            />
+                          </div>
+                          <div class="ability-space"></div>
+                        </div>
+                        <div class="common-range-slider">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div id="luck-range"></div>
+                            </div>
+                          </div>
+                          <div class="slider-info slider-labels">
+                            <div class="caption">
+                              <span id="luck-range-value1"></span>
+                            </div>
+                            <div class="text-right caption">
+                              <span id="luck-range-value2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ability-item">
+                        <div class="ability-icon">
+                          <div class="ability-space"></div>
+                          <div class="ability-img-box">
+                            <img
+                              class="ability-img"
+                              src="images/ability/ability8.png"
+                              alt="ability 8"
+                            />
+                          </div>
+                          <div class="ability-space"></div>
+                        </div>
+                        <div class="common-range-slider">
+                          <div class="row">
+                            <div class="col-sm-12">
+                              <div id="book-range"></div>
+                            </div>
+                          </div>
+                          <div class="slider-info slider-labels">
+                            <div class="caption">
+                              <span id="book-range-value1"></span>
+                            </div>
+                            <div class="text-right caption">
+                              <span id="book-range-value2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-list-right">
+            <div class="list-sort">
+              <div class="sort-box">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-txt"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Action
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-drop dropdown-toggle dropdown-toggle-split"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Separated link</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="list-card">
+              <div class="list-monster-row">
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class1.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/grey.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/FLORIA/earth%5BN%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/n.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/earth.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Floria</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class2.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/blue.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/FLORIA/earth%5BR%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/r.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/earth.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Floria</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class1.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/pink.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/OXTACUS/water%5Bsr%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/sr.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/water.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Oxtacus</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class1.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/gold.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/OXTACUS/water%5Bssr%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/ssr.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/water.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Oxtacus</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class1.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/grey.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/FLORIA/earth%5BN%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/n.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/earth.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Floria</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class2.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/blue.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/WINDORA/fire%5BR%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/r.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/fire.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Windora</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class1.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/pink.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/WINDORA/fire%5BSR%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/sr.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/fire.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Windora</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class1.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/blue.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/PECKY/plant%5BR%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/r.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/plant.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Pecky</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class1.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/pink.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/PECKY/plant%5BSR%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/sr.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/plant.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Pecky</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="monster-detail.html" class="list-monster-col">
+                  <div class="monster-img-box">
+                    <img
+                      src="images/class/class1.png"
+                      class="monster-class"
+                      alt="class"
+                    />
+                    <img
+                      src="images/card/gold.png"
+                      class="monster-bg"
+                      alt="background"
+                    />
+                    <img
+                      src="images/char/OXTACUS/water%5Bssr%5D.png"
+                      class="monster-img"
+                      alt="monster"
+                    />
+                    <img
+                      src="images/card/ssr.png"
+                      class="monster-rank"
+                      alt="rank"
+                    />
+                    <div class="monster-info">
+                      <img
+                        class="monster-element"
+                        src="images/element/water.png"
+                        alt="element"
+                      />
+                      <span class="monster-name">Oxtacus</span>
+                    </div>
+                    <span class="monster-lv">LV 99</span>
+                    <div class="price-box">
+                      <div class="price">
+                        <img src="images/jew.png" alt="jew" />
+                      </div>
+                      <span class="price-number">51230</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="list-card">
-          <div class="list-monster-row">
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class1.png" class="monster-class" alt="class">
-                <img src="images/card/grey.png" class="monster-bg" alt="background">
-                <img src="images/char/FLORIA/earth%5BN%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/n.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/earth.png" alt="element">
-                  <span class="monster-name">Floria</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class2.png" class="monster-class" alt="class">
-                <img src="images/card/blue.png" class="monster-bg" alt="background">
-                <img src="images/char/FLORIA/earth%5BR%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/r.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/earth.png" alt="element">
-                  <span class="monster-name">Floria</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class1.png" class="monster-class" alt="class">
-                <img src="images/card/pink.png" class="monster-bg" alt="background">
-                <img src="images/char/OXTACUS/water%5Bsr%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/sr.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/water.png" alt="element">
-                  <span class="monster-name">Oxtacus</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class1.png" class="monster-class" alt="class">
-                <img src="images/card/gold.png" class="monster-bg" alt="background">
-                <img src="images/char/OXTACUS/water%5Bssr%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/ssr.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/water.png" alt="element">
-                  <span class="monster-name">Oxtacus</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class1.png" class="monster-class" alt="class">
-                <img src="images/card/grey.png" class="monster-bg" alt="background">
-                <img src="images/char/FLORIA/earth%5BN%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/n.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/earth.png" alt="element">
-                  <span class="monster-name">Floria</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class2.png" class="monster-class" alt="class">
-                <img src="images/card/blue.png" class="monster-bg" alt="background">
-                <img src="images/char/WINDORA/fire%5BR%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/r.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/fire.png" alt="element">
-                  <span class="monster-name">Windora</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class1.png" class="monster-class" alt="class">
-                <img src="images/card/pink.png" class="monster-bg" alt="background">
-                <img src="images/char/WINDORA/fire%5BSR%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/sr.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/fire.png" alt="element">
-                  <span class="monster-name">Windora</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class1.png" class="monster-class" alt="class">
-                <img src="images/card/blue.png" class="monster-bg" alt="background">
-                <img src="images/char/PECKY/plant%5BR%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/r.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/plant.png" alt="element">
-                  <span class="monster-name">Pecky</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class1.png" class="monster-class" alt="class">
-                <img src="images/card/pink.png" class="monster-bg" alt="background">
-                <img src="images/char/PECKY/plant%5BSR%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/sr.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/plant.png" alt="element">
-                  <span class="monster-name">Pecky</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-            <a href="monster-detail.html" class="list-monster-col">
-              <div class="monster-img-box">
-                <img src="images/class/class1.png" class="monster-class" alt="class">
-                <img src="images/card/gold.png" class="monster-bg" alt="background">
-                <img src="images/char/OXTACUS/water%5Bssr%5D.png" class="monster-img" alt="monster">
-                <img src="images/card/ssr.png" class="monster-rank" alt="rank">
-                <div class="monster-info">
-                  <img class="monster-element" src="images/element/water.png" alt="element">
-                  <span class="monster-name">Oxtacus</span>
-                </div>
-                <span class="monster-lv">LV 99</span>
-                <div class="price-box">
-                  <div class="price">
-                    <img src="images/jew.png" alt="jew">
-                  </div>
-                  <span class="price-number">51230</span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+      </main>
+      <footer class="footer" id="footer"></footer>
     </div>
-  </main>
-  <footer class="footer" id="footer">
-  </footer>
-</div>
 
-<!-- Optional JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/nouislider.js"></script>
-<!-- Core JavaScript -->
-<!--<script src="dist/core.min.js"></script>-->
-<script src="third_party/modernizr.min.js"></script>
-<!-- End Core JavaScript -->
+    <!-- Optional JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/nouislider.js"></script>
+    <!-- Core JavaScript -->
+    <!--<script src="dist/core.min.js"></script>-->
+    <script src="third_party/modernizr.min.js"></script>
+    <!-- End Core JavaScript -->
 
-<!-- JavaScript -->
-<!--<script src="dist/app.min.js"></script>-->
-<script src="js/common.js"></script>
-<script src="customs/script.js"></script>
-<!-- End JavaScript -->
-</body>
+    <!-- JavaScript -->
+    <!--<script src="dist/app.min.js"></script>-->
+    <script src="js/common.js"></script>
+    <script src="customs/script.js"></script>
+    <!-- End JavaScript -->
+  </body>
 </html>
