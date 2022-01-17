@@ -11468,12 +11468,12 @@ textarea.form-control-lg {
   cursor: auto;
 }
 
-.modal .modal-content {
+.modal-coming .modal-content, .modal-detail .modal-content {
   background-color: transparent;
   border: 0;
   border-radius: 0;
 }
-.modal .modal-body {
+.modal-coming .modal-body, .modal-detail .modal-body {
   text-align: center;
   -webkit-animation: bgcolor 20s infinite;
   animation: bgcolor 10s infinite;
@@ -11481,11 +11481,42 @@ textarea.form-control-lg {
   animation-direction: alternate;
   border-radius: 6px;
 }
-.modal .modal-body span {
+.modal-coming .modal-body span, .modal-detail .modal-body span {
   font-size: 1.4rem;
   font-weight: bold;
   color: #ffffff;
 }
+.modal-terms .modal-title {
+  font-weight: bold;
+}
+.modal-terms .ul-numeric {
+  list-style: decimal;
+}
+.modal-terms .modal-content {
+  border: unset;
+  border-radius: 0;
+}
+.modal-terms .modal-header {
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 10s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  border-radius: 0;
+}
+.modal-terms .modal-header .modal-title {
+  color: #ffffff;
+}
+.modal-terms .modal-body {
+  -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 10s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.modal-terms .modal-body span {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
 @keyframes bgcolor {
   0% {
     background-color: #2c6bf1;
@@ -13008,6 +13039,12 @@ body {
   background-color: #1245849e;
   border-radius: 5px;
 }
+.main-inventory .left-inventory .inventory-menu .nav {
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  flex-wrap: nowrap;
+}
 .main-inventory .left-inventory .inventory-menu .inventory-menu-item {
   margin: 10px 1rem 5px 1rem;
   position: relative;
@@ -13019,6 +13056,11 @@ body {
   text-decoration: none;
   color: #ffffff;
   padding: 0 1rem;
+}
+@media (max-width: 1399.98px) {
+  .main-inventory .left-inventory .inventory-menu .inventory-menu-item .menu-name {
+    font-size: 1.2rem;
+  }
 }
 .main-inventory .left-inventory .inventory-menu .inventory-menu-item .menu-name.active:before {
   position: absolute;
@@ -13049,6 +13091,7 @@ body {
 }
 .main-inventory .left-inventory .inventory-left-body .button-detail {
   text-align: center;
+  margin-bottom: 1rem;
 }
 .main-inventory .left-inventory .inventory-left-body .button-detail .btn-detail {
   color: #ffffff;
@@ -13072,7 +13115,7 @@ body {
   margin: 2rem 0;
 }
 .main-inventory .left-inventory .inventory-left-body .not-found span {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #ffffff;
   font-weight: bold;
 }

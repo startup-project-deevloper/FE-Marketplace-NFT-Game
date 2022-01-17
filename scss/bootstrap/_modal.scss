@@ -1,4 +1,4 @@
-.modal {
+.modal-coming, .modal-detail {
   .modal-content {
     background-color: transparent;
     border: 0;
@@ -21,6 +21,39 @@
   #comingSoonModal {
   }
   #detailModal {
+  }
+}
+
+.modal-terms{
+  .modal-title{
+    font-weight:bold;
+  }
+  .ul-numeric{
+    list-style: decimal;
+  }
+  .modal-content{
+    border: unset;
+    border-radius: 0;
+  }
+  .modal-header{
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    border-radius: 0;
+    .modal-title{
+      color: #ffffff;
+    }
+  }
+  .modal-body{
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    span {
+      font-size: 1rem;
+      color: #ffffff;
+    }
   }
 }
 @keyframes bgcolor {

@@ -11,6 +11,9 @@
     .inventory-menu {
       background-color: #1245849e;
       border-radius: 5px;
+      .nav{
+        @include flex-wrap(nowrap);
+      }
 
       .inventory-menu-item {
         margin: 10px 1rem 5px 1rem;
@@ -23,6 +26,9 @@
           text-decoration: none;
           color: #ffffff;
           padding: 0 1rem;
+          @include media-breakpoint-down(xxl){
+            font-size: 1.2rem;
+          }
 
           &.active {
             &:before {
@@ -60,7 +66,7 @@
 
       .button-detail {
         text-align: center;
-
+        margin-bottom: 1rem;
         .btn-detail {
           color: #ffffff;
           font-size: 1.6rem;
@@ -86,7 +92,7 @@
         margin: 2rem 0;
 
         span {
-          font-size: 2rem;
+          font-size: 1.6rem;
           color: #ffffff;
           font-weight: bold;
         }
