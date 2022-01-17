@@ -133,36 +133,36 @@ if (Modernizr.touch === true && window.innerWidth <= 767) {
       }
     }
 
-/*    const schedule = [
-      ['January 24 2022 10:00:00 UTC+7', 'January 25 2022 10:00:00 UTC+7']
-    ];
+    /*    const schedule = [
+          ['January 24 2022 10:00:00 UTC+7', 'January 25 2022 10:00:00 UTC+7']
+        ];
 
-    for (var i = 0; i < schedule.length; i++) {
-      var startDate = schedule[i][0];
-      var endDate = schedule[i][1];
+        for (var i = 0; i < schedule.length; i++) {
+          var startDate = schedule[i][0];
+          var endDate = schedule[i][1];
 
-      // put dates in milliseconds for easy comparisons
-      var startMs = Date.parse(startDate);
-      var endMs = Date.parse(endDate);
-      var currentMs = Date.parse(new Date());
+          // put dates in milliseconds for easy comparisons
+          var startMs = Date.parse(startDate);
+          var endMs = Date.parse(endDate);
+          var currentMs = Date.parse(new Date());
 
-      // if current date is between start and end dates, display clock
-      if (endMs > currentMs && currentMs >= startMs) {
-        initializeClock('countDownLaunch', endDate);
-      }
-    }
+          // if current date is between start and end dates, display clock
+          if (endMs > currentMs && currentMs >= startMs) {
+            initializeClock('countDownLaunch', endDate);
+          }
+        }
 
-    schedule.forEach(([startDate, endDate]) => {
-      // put dates in milliseconds for easy comparisons
-      const startMs = Date.parse(startDate);
-      const endMs = Date.parse(endDate);
-      const currentMs = Date.parse(new Date());
+        schedule.forEach(([startDate, endDate]) => {
+          // put dates in milliseconds for easy comparisons
+          const startMs = Date.parse(startDate);
+          const endMs = Date.parse(endDate);
+          const currentMs = Date.parse(new Date());
 
-      // if current date is between start and end dates, display clock
-      if (endMs > currentMs && currentMs >= startMs) {
-        initializeClock('countDownLaunch', endDate);
-      }
-    });*/
+          // if current date is between start and end dates, display clock
+          if (endMs > currentMs && currentMs >= startMs) {
+            initializeClock('countDownLaunch', endDate);
+          }
+        });*/
     const deadlineLaunch = 'January 24 2022 10:00:00 UTC+7';
     initializeClock('countDownLaunch', deadlineLaunch);
   }
@@ -174,12 +174,31 @@ if (Modernizr.touch === true && window.innerWidth <= 767) {
     })
   }
 
+  function formValidation(){
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  }
+
   function init() {
     getBarwidth()
     clearFilter()
     countDownTimer()
     countDownLaunch()
     bsPopover()
+    formValidation()
   }
 
   $(document).ready(function () {

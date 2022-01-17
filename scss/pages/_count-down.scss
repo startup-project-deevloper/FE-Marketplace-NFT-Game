@@ -1,4 +1,3 @@
-
 #countDown {
   color: #fff;
   display: inline-block;
@@ -28,10 +27,18 @@
 .count-down-wrapper {
   padding: 0 0.6rem;
 
-  .days, .hours, .minutes, .seconds {
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
     font-size: 2.3rem;
     font-weight: 900;
-    background: linear-gradient(0deg, rgba(62, 236, 254, 1) 0%, rgba(194, 225, 236, 1) 60%, rgba(194, 225, 236, 1) 100%);
+    background: linear-gradient(
+      0deg,
+      rgba(62, 236, 254, 1) 0%,
+      rgba(194, 225, 236, 1) 60%,
+      rgba(194, 225, 236, 1) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -55,11 +62,9 @@
   padding-top: 5px;
 }
 
-
 .count-down-wrapper .time > span {
   display: inline-block;
 }
-
 
 @media (max-width: 375.98px) {
   .count-down-wrapper {
@@ -94,7 +99,7 @@
   }
 
   .count-down-launch {
-    text-shadow:  #fafcd0 0 0 4px;
+    text-shadow: #fafcd0 0 0 4px;
     div {
       display: inline-block;
       vertical-align: middle;
@@ -104,13 +109,20 @@
       width: 50px;
     }
 
-    .days, .hours, .minutes, .seconds {
+    .days,
+    .hours,
+    .minutes,
+    .seconds {
       font-size: 2.3rem;
       font-weight: 900;
-      background: linear-gradient(0deg, rgba(247,251,180,1) 0%, rgba(253,254,235,1) 65%, rgba(253,254,235,1) 100%);
+      background: linear-gradient(
+        0deg,
+        rgba(247, 251, 180, 1) 0%,
+        rgba(253, 254, 235, 1) 65%,
+        rgba(253, 254, 235, 1) 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
 }
-

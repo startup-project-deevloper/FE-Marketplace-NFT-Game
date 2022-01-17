@@ -4,13 +4,11 @@
   }
 
   .left-inventory {
-
     @include media-breakpoint-up(xl) {
       margin-left: 2rem;
     }
 
     .inventory-menu {
-
       background-color: #1245849e;
       border-radius: 5px;
 
@@ -30,7 +28,7 @@
             &:before {
               position: absolute;
               bottom: -5px;
-              content: "";
+              content: '';
               height: 0;
               left: 0;
               width: 100%;
@@ -78,7 +76,7 @@
             position: absolute;
             right: -30px;
             top: -1px;
-            content: url(../images/inventory/btn-arrow.png)
+            content: url(../images/inventory/btn-arrow.png);
           }
         }
       }
@@ -94,7 +92,5 @@
         }
       }
     }
-
-
   }
 }

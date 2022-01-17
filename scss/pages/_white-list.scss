@@ -1,0 +1,64 @@
+.main-white-list {
+  padding-bottom: 2rem;
+  .white-list-body {
+    margin-top: 2rem;
+    background-color: #165db7a8;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    a {
+      color: #153666;
+    }
+    .white-list-header {
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .rule-list {
+      @include media-breakpoint-up(md) {
+        width: fit-content;
+      }
+      width: 100%;
+      margin: auto;
+      color: #ffffff;
+      font-weight: 600;
+      span {
+        font-size: 18px;
+      }
+      .list-task {
+        list-style: decimal;
+        line-height: 2;
+        .item-task {
+        }
+      }
+    }
+    .white-list-register {
+      @include media-breakpoint-up(md) {
+        width: 60%;
+        margin: auto;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 45%;
+        margin: auto;
+      }
+      .special-button {
+        margin: unset;
+      }
+      label {
+        color: #ffffff;
+      }
+      label,
+      .form-control {
+        font-weight: bold;
+      }
+      .form-check {
+        padding: 0;
+      }
+      .form-check-label {
+        color: #ffffff;
+      }
+    }
+  }
+}

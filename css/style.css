@@ -11306,7 +11306,8 @@ textarea.form-control-lg {
     flex-direction: column;
   }
 }
-.main-inventory .inventory-menu .nav-pills .nav-link.active, .main-inventory .inventory-menu .nav-pills .show > .nav-link {
+.main-inventory .inventory-menu .nav-pills .nav-link.active,
+.main-inventory .inventory-menu .nav-pills .show > .nav-link {
   background-color: unset;
 }
 
@@ -11335,6 +11336,32 @@ textarea.form-control-lg {
   font-size: 3rem;
   font-weight: bold;
   color: #ffffff;
+}
+@media (max-width: 767.98px) {
+  .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl, .navbar .container-xxl {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+  }
+  .navbar a.navbar-brand {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+  }
+  .navbar a.navbar-brand span {
+    font-size: 2.5rem;
+    margin: 0;
+  }
 }
 
 .special-button {
@@ -11792,6 +11819,21 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #165db7;
+}
+
+.color-bg {
+  /* The image used */
+  background-image: url("../images/bg-hero.jpg");
+  /* Full height */
+  min-height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.color-bg .header {
+  border-bottom: unset;
+  background-color: #165db7a8;
 }
 
 .white-space {
@@ -12872,7 +12914,10 @@ body {
 .count-down-wrapper {
   padding: 0 0.6rem;
 }
-.count-down-wrapper .days, .count-down-wrapper .hours, .count-down-wrapper .minutes, .count-down-wrapper .seconds {
+.count-down-wrapper .days,
+.count-down-wrapper .hours,
+.count-down-wrapper .minutes,
+.count-down-wrapper .seconds {
   font-size: 2.3rem;
   font-weight: 900;
   background: linear-gradient(0deg, #3eecfe 0%, #c2e1ec 60%, #c2e1ec 100%);
@@ -12940,7 +12985,10 @@ body {
 #countDownLaunch .count-down-launch .time {
   width: 50px;
 }
-#countDownLaunch .count-down-launch .days, #countDownLaunch .count-down-launch .hours, #countDownLaunch .count-down-launch .minutes, #countDownLaunch .count-down-launch .seconds {
+#countDownLaunch .count-down-launch .days,
+#countDownLaunch .count-down-launch .hours,
+#countDownLaunch .count-down-launch .minutes,
+#countDownLaunch .count-down-launch .seconds {
   font-size: 2.3rem;
   font-weight: 900;
   background: linear-gradient(0deg, #f7fbb4 0%, #fdfeeb 65%, #fdfeeb 100%);
@@ -13027,5 +13075,72 @@ body {
   font-size: 2rem;
   color: #ffffff;
   font-weight: bold;
+}
+
+.main-white-list {
+  padding-bottom: 2rem;
+}
+.main-white-list .white-list-body {
+  margin-top: 2rem;
+  background-color: #165db7a8;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+}
+.main-white-list .white-list-body a {
+  color: #153666;
+}
+.main-white-list .white-list-body .white-list-header {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.main-white-list .white-list-body .rule-list {
+  width: 100%;
+  margin: auto;
+  color: #ffffff;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .main-white-list .white-list-body .rule-list {
+    width: fit-content;
+  }
+}
+.main-white-list .white-list-body .rule-list span {
+  font-size: 18px;
+}
+.main-white-list .white-list-body .rule-list .list-task {
+  list-style: decimal;
+  line-height: 2;
+}
+@media (min-width: 768px) {
+  .main-white-list .white-list-body .white-list-register {
+    width: 60%;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .main-white-list .white-list-body .white-list-register {
+    width: 45%;
+    margin: auto;
+  }
+}
+.main-white-list .white-list-body .white-list-register .special-button {
+  margin: unset;
+}
+.main-white-list .white-list-body .white-list-register label {
+  color: #ffffff;
+}
+.main-white-list .white-list-body .white-list-register label,
+.main-white-list .white-list-body .white-list-register .form-control {
+  font-weight: bold;
+}
+.main-white-list .white-list-body .white-list-register .form-check {
+  padding: 0;
+}
+.main-white-list .white-list-body .white-list-register .form-check-label {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

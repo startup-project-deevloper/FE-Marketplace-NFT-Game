@@ -16,6 +16,23 @@ body {
   background-color: #165db7;
 }
 
+.color-bg {
+  /* The image used */
+  background-image: url('../images/bg-hero.jpg');
+
+  /* Full height */
+  min-height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .header {
+    border-bottom: unset;
+    background-color: #165db7a8;
+  }
+}
+
 .white-space {
   height: 25px;
   background-color: #1e7be5;

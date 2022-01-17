@@ -129,16 +129,17 @@
   }
 }
 
-.main-inventory{
-  .inventory-menu{
-    .nav{
+.main-inventory {
+  .inventory-menu {
+    .nav {
       @include justify-content(space-evenly);
-      @include media-breakpoint-down(sm){
+      @include media-breakpoint-down(sm) {
         @include flex-direction(column);
       }
     }
 
-    .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
       background-color: unset;
     }
   }
