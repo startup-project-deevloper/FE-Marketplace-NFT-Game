@@ -30,20 +30,22 @@
         box-shadow: none;
       }
       .dropdown-menu {
-        background-color: #1767bd;
+        background: rgb(72, 167, 246);
+        background: linear-gradient(180deg, rgba(72, 167, 246, 1) 7%, rgba(33, 192, 252, 1) 100%);
         border: none;
         li {
           a {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #ffffff;
             font-weight: bold;
             &:hover {
-              background-color: #103565;
+              background-color: #ffffff;
             }
           }
         }
       }
       .dropdown-toggle {
+        font-size: 1.2rem;
         text-transform: uppercase;
         color: #ffffff;
         font-weight: bold;

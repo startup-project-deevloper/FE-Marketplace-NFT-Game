@@ -11158,6 +11158,24 @@ textarea.form-control-lg {
   color: #ffffff;
 }
 
+.dropdown .btn-custom {
+  background: #48a7f6;
+  background: linear-gradient(180deg, #48a7f6 50%, #21c0fc 100%);
+  color: #134d97 !important;
+  font-weight: 900 !important;
+  padding: 0.3rem 1.5rem;
+  border-radius: 8px;
+  border: transparent;
+}
+@media (max-width: 575.98px) {
+  .dropdown .btn-custom {
+    padding: 0.7rem 4rem;
+  }
+}
+.dropdown .dropdown-account .dropdown-item i {
+  width: 35px;
+}
+
 .nav-custom {
   position: relative;
   display: -webkit-box;
@@ -11211,7 +11229,7 @@ textarea.form-control-lg {
   padding-top: 0;
   padding-bottom: 0;
   z-index: 1;
-  font-weight: bold;
+  font-weight: 900;
 }
 .nav-custom .nav-item .nav-link.active {
   color: #ffffff;
@@ -11334,7 +11352,7 @@ textarea.form-control-lg {
 .navbar a.navbar-brand span {
   margin-left: 1.5rem;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 900;
   color: #ffffff;
 }
 @media (max-width: 767.98px) {
@@ -11561,18 +11579,20 @@ textarea.form-control-lg {
   box-shadow: none;
 }
 .offcanvas-box .nav-right .dropdown .dropdown-menu {
-  background-color: #1767bd;
+  background: #48a7f6;
+  background: linear-gradient(180deg, #48a7f6 7%, #21c0fc 100%);
   border: none;
 }
 .offcanvas-box .nav-right .dropdown .dropdown-menu li a {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #ffffff;
   font-weight: bold;
 }
 .offcanvas-box .nav-right .dropdown .dropdown-menu li a:hover {
-  background-color: #103565;
+  background-color: #ffffff;
 }
 .offcanvas-box .nav-right .dropdown .dropdown-toggle {
+  font-size: 1.2rem;
   text-transform: uppercase;
   color: #ffffff;
   font-weight: bold;
@@ -11738,7 +11758,7 @@ Header
   color: #ffffff;
   font-size: 1.2rem;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 900;
 }
 .box-header .nav-right {
   display: -webkit-box;
@@ -11762,7 +11782,7 @@ Header
   text-transform: uppercase;
   padding: 1rem 1rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 900;
 }
 .box-header .nav-right .special-button {
   margin: 0 1rem;
@@ -11777,16 +11797,17 @@ Header
   box-shadow: none;
 }
 .box-header .nav-right .dropdown .dropdown-menu {
-  background-color: #1767bd;
+  background: #48a7f6;
+  background: linear-gradient(180deg, #48a7f6 7%, #21c0fc 100%);
   border: none;
 }
 .box-header .nav-right .dropdown .dropdown-menu li a {
-  font-size: 0.8rem;
-  color: #ffffff;
+  font-size: 1rem;
+  color: #134d97;
   font-weight: bold;
 }
 .box-header .nav-right .dropdown .dropdown-menu li a:hover {
-  background-color: #103565;
+  background-color: #ffffff;
 }
 .box-header .nav-right .dropdown button {
   color: #ffffff;
@@ -11903,7 +11924,7 @@ body {
   padding-top: 1.5rem;
   font-size: 1.25rem;
   user-select: none;
-  font-weight: bold;
+  font-weight: 900;
 }
 .main-split .main-menu-left .menu-clear span {
   color: #ffffff;
@@ -11916,7 +11937,7 @@ body {
   text-decoration: none;
   border: none;
   background: transparent;
-  font-weight: bold;
+  font-weight: 900;
   padding: 0;
 }
 .main-split .main-menu-left .menu-tabs ul.nav {
@@ -11986,7 +12007,7 @@ body {
   margin: 1rem 3.5rem;
   cursor: default;
   user-select: none;
-  font-weight: bold;
+  font-weight: 900;
 }
 .main-split .main-menu-left .menu-tabs .tab-content .general-body .general-rarity .common-form-check {
   -webkit-box-pack: space-between !important;

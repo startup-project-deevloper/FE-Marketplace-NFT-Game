@@ -52,7 +52,7 @@ Header
       color: #ffffff;
       font-size: 1.2rem;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 900;
     }
   }
 
@@ -69,7 +69,7 @@ Header
       text-transform: uppercase;
       padding: 1rem 1rem;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 900;
     }
     .special-button {
       margin: 0 1rem;
@@ -84,15 +84,16 @@ Header
         box-shadow: none;
       }
       .dropdown-menu {
-        background-color: #1767bd;
+        background: rgb(72, 167, 246);
+        background: linear-gradient(180deg, rgba(72, 167, 246, 1) 7%, rgba(33, 192, 252, 1) 100%);
         border: none;
         li {
           a {
-            font-size: 0.8rem;
-            color: #ffffff;
+            font-size: 1rem;
+            color: #134d97;
             font-weight: bold;
             &:hover {
-              background-color: #103565;
+              background-color: #ffffff;
             }
           }
         }

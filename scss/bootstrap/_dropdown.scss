@@ -1,0 +1,21 @@
+.dropdown {
+  .btn-custom {
+    background: rgb(72, 167, 246);
+    background: linear-gradient(180deg, rgba(72, 167, 246, 1) 50%, rgba(33, 192, 252, 1) 100%);
+    color: #134d97 !important;
+    font-weight: 900 !important;
+    padding: 0.3rem 1.5rem;
+    border-radius: 8px;
+    border: transparent;
+    @include media-breakpoint-down(sm){
+      padding: 0.7rem 4rem;
+    }
+  }
+  .dropdown-account {
+    .dropdown-item {
+      i {
+        width: 35px;
+      }
+    }
+  }
+}
