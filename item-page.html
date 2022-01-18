@@ -126,7 +126,8 @@
           <span>MARKETPLACE</span>
         </a>
         <div class="special-button">
-          <button class="sp-button">Connect Wallet</button>
+          <button type="button" data-bs-toggle="modal" data-bs-target="#connectModal" class="sp-button">Connect Wallet
+          </button>
         </div>
       </div>
     </nav>
@@ -442,6 +443,53 @@
   </main>
   <footer class="footer" id="footer">
   </footer>
+</div>
+
+<div class="modal modal-connect fade" id="connectModal" tabindex="-1" aria-labelledby="connectModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-wallet modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="btn-close close-button-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div><h2 class="text-center title text-upper">Connect to a wallet</h2>
+          <div class="mt-4 connect-wallet-wrap">
+            <div class="d-flex flex-column justify-content-center align-items-center connect-wallet-item"><img
+              src="/images/connect/metamask.svg" alt="Metamask">
+              <div class="connect-txt">Metamask</div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center connect-wallet-item"><img
+              src="/images/connect/wallet-connect.svg" alt="WalletConnect">
+              <div class="connect-txt">WalletConnect</div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center connect-wallet-item"><img
+              src="/images/connect/trust-wallet.svg" alt="Trust Wallet">
+              <div class="connect-txt">Trust Wallet</div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center connect-wallet-item"><img
+              src="/images/connect/math-wallet.svg" alt="MathWallet">
+              <div class="connect-txt">MathWallet</div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center connect-wallet-item"><img
+              src="/images/connect/token-pocket.svg" alt="TokenPocket">
+              <div class="connect-txt">TokenPocket</div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center connect-wallet-item"><img
+              src="/images/connect/binance-chain.svg" alt="Binance Chain">
+              <div class="connect-txt">Binance Chain</div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center connect-wallet-item"><img
+              src="/images/connect/safepal.svg" alt="SafePal">
+              <div class="connect-txt">SafePal</div>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center connect-wallet-item"><img
+              src="/images/connect/coin98.svg" alt="Coin98">
+              <div class="connect-txt">Coin98</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Optional JavaScript -->

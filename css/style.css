@@ -11535,6 +11535,52 @@ textarea.form-control-lg {
   color: #ffffff;
 }
 
+.modal-connect .modal-content {
+  background-color: #559fff;
+}
+.modal-connect .close-button-modal {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  z-index: 2;
+  opacity: 1;
+  border: 0;
+  font-size: 15px;
+  margin-right: 8px;
+  margin-top: 4px;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+.modal-connect .modal-wallet .text-upper {
+  text-transform: uppercase;
+}
+.modal-connect .modal-wallet .title {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 900;
+}
+.modal-connect .modal-wallet .connect-wallet-wrap {
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  cursor: pointer;
+}
+.modal-connect .connect-txt {
+  font-weight: bold;
+}
+.modal-connect .modal-wallet .connect-wallet-wrap .connect-wallet-item {
+  padding: 25px 10px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+.modal-connect .modal-wallet .connect-wallet-wrap .connect-wallet-item:hover {
+  background-color: #103565;
+  color: #fff;
+}
+.modal-connect img {
+  vertical-align: middle;
+}
+
 @keyframes bgcolor {
   0% {
     background-color: #2c6bf1;
@@ -11556,6 +11602,7 @@ textarea.form-control-lg {
   background-color: #103565;
 }
 .offcanvas-box .btn-close {
+  opacity: 1;
   background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
 }
 .offcanvas-box .nav-left {
