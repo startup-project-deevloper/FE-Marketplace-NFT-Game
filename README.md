@@ -55,3 +55,4 @@ Have a bug or an issue? [Open a new issue](https://github.com/trungnghia112/fron
 - **Font Awesome 5.12.1**
 
 - **Prettier ^2.0.5** (Opinionated Code Formatter).
+
